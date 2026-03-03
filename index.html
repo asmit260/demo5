@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SmileCare Dental Clinic – Advanced dental care with compassionate doctors. Book your appointment today for teeth whitening, braces, implants & more." />
+  <meta name="keywords" content="dental clinic, dentist near me, teeth whitening, dental implants, braces, orthodontist, root canal, SmileCare" />
+  <title>SmileCare Dental Clinic | Expert Dental Care You Can Trust</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+  <a href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20book%20an%20appointment" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp us">
+    <i class="fab fa-whatsapp"></i>
+    <span>Book Now</span>
+  </a>
+
+  <!-- ===== STICKY HEADER / NAVBAR ===== -->
+  <header class="header" id="header">
+    <nav class="nav container" role="navigation" aria-label="Main navigation">
+      <!-- Logo -->
+      <a href="#hero" class="nav__logo">
+        <div class="logo-icon"><i class="fas fa-tooth"></i></div>
+        <div class="logo-text">
+          <span class="logo-primary">SmileCare</span>
+          <span class="logo-sub">Dental Clinic</span>
+        </div>
+      </a>
+
+      <!-- Desktop nav links -->
+      <ul class="nav__list" id="nav-list">
+        <li><a href="#services" class="nav__link">Services</a></li>
+        <li><a href="#doctors" class="nav__link">Doctors</a></li>
+        <li><a href="#why-us" class="nav__link">Why Us</a></li>
+        <li><a href="#testimonials" class="nav__link">Reviews</a></li>
+        <li><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+
+      <!-- Header CTAs -->
+      <div class="nav__cta">
+        <a href="tel:+919876543210" class="btn btn--outline btn--sm" id="nav-call-btn">
+          <i class="fas fa-phone"></i> Call Us
+        </a>
+        <a href="#appointment" class="btn btn--primary btn--sm" id="nav-appt-btn">
+          Book Appointment
+        </a>
+      </div>
+
+      <!-- Mobile hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ===== MOBILE NAV DRAWER ===== -->
+  <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+    <ul class="mobile-nav__list">
+      <li><a href="#services" class="mobile-nav__link">Services</a></li>
+      <li><a href="#doctors" class="mobile-nav__link">Doctors</a></li>
+      <li><a href="#why-us" class="mobile-nav__link">Why Us</a></li>
+      <li><a href="#testimonials" class="mobile-nav__link">Reviews</a></li>
+      <li><a href="#contact" class="mobile-nav__link">Contact</a></li>
+    </ul>
+    <div class="mobile-nav__cta">
+      <a href="tel:+919876543210" class="btn btn--outline btn--full">
+        <i class="fas fa-phone"></i> Call: +91 98765 43210
+      </a>
+      <a href="https://wa.me/919876543210" class="btn btn--whatsapp btn--full" target="_blank" rel="noopener">
+        <i class="fab fa-whatsapp"></i> WhatsApp Us
+      </a>
+      <a href="#appointment" class="btn btn--primary btn--full">
+        Book Appointment
+      </a>
+    </div>
+  </div>
+  <div class="overlay" id="overlay"></div>
+
+  <main>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="hero">
+      <div class="hero__bg-blur blob1"></div>
+      <div class="hero__bg-blur blob2"></div>
+      <div class="container hero__inner">
+        <div class="hero__content" data-aos="fade-right">
+          <div class="hero__badge">
+            <i class="fas fa-shield-heart"></i> Trusted by 10,000+ Patients in Your City
+          </div>
+          <h1 class="hero__title">
+            Your Perfect Smile <br/>
+            <span class="highlight">Starts Here</span>
+          </h1>
+          <p class="hero__subtitle">
+            Advanced dental care with a gentle touch. From routine cleanings to full smile makeovers — we've got every tooth covered.
+          </p>
+          <div class="hero__stats">
+            <div class="stat">
+              <strong>15+</strong><span>Years Experience</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <strong>10K+</strong><span>Happy Patients</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat">
+              <strong>4.9★</strong><span>Google Rating</span>
+            </div>
+          </div>
+          <div class="hero__actions">
+            <a href="#appointment" class="btn btn--primary btn--lg" id="hero-appt-btn">
+              <i class="fas fa-calendar-check"></i> Book Free Consultation
+            </a>
+            <a href="tel:+919876543210" class="btn btn--glass btn--lg" id="hero-call-btn">
+              <i class="fas fa-phone"></i> +91 98765 43210
+            </a>
+          </div>
+          <div class="hero__trust">
+            <div class="trust-avatars">
+              <img src="https://i.pravatar.cc/40?img=1" alt="Patient 1" />
+              <img src="https://i.pravatar.cc/40?img=5" alt="Patient 2" />
+              <img src="https://i.pravatar.cc/40?img=9" alt="Patient 3" />
+              <img src="https://i.pravatar.cc/40?img=12" alt="Patient 4" />
+            </div>
+            <p>Join thousands of happy patients already smiling with us!</p>
+          </div>
+        </div>
+        <div class="hero__visual" data-aos="fade-left">
+          <div class="hero__img-wrap">
+            <div class="hero__img-glow"></div>
+            <img src="hero-doctor.jpg" alt="SmileCare Doctor" class="hero__img" id="hero-img" />
+            <!-- Floating badge -->
+            <div class="hero__badge-float badge-left">
+              <i class="fas fa-star" style="color:#fbbf24;"></i>
+              <div>
+                <strong>4.9/5</strong>
+                <span>Google Reviews</span>
+              </div>
+            </div>
+            <div class="hero__badge-float badge-right">
+              <i class="fas fa-calendar-check" style="color:#22c55e;"></i>
+              <div>
+                <strong>24/7</strong>
+                <span>Appointments</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll hint -->
+      <div class="scroll-hint">
+        <span>Scroll to explore</span>
+        <i class="fas fa-chevron-down"></i>
+      </div>
+    </section>
+
+    <!-- ===== TRUST STRIP ===== -->
+    <section class="trust-strip">
+      <div class="container trust-strip__inner">
+        <div class="trust-item">
+          <i class="fas fa-user-md"></i>
+          <span>Board-Certified Dentists</span>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-shield-virus"></i>
+          <span>Clinic Sterilized Daily</span>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-tooth"></i>
+          <span>Painless Procedures</span>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-money-bill-wave"></i>
+          <span>EMI Available / Insurance</span>
+        </div>
+        <div class="trust-item">
+          <i class="fas fa-clock"></i>
+          <span>Same Day Appointments</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SERVICES SECTION ===== -->
+    <section class="services section" id="services">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">What We Offer</span>
+          <h2 class="section-title">Comprehensive <span class="highlight">Dental Services</span></h2>
+          <p class="section-desc">From everyday checkups to complete smile transformations — all under one roof.</p>
+        </div>
+        <div class="services__grid">
+
+          <div class="service-card" data-service="whitening">
+            <div class="service-card__icon" style="--icon-color: #3b82f6;">
+              <i class="fas fa-smile-beam"></i>
+            </div>
+            <h3>Teeth Whitening</h3>
+            <p>Professional in-office whitening that delivers 6–8 shades brighter smile in just one session.</p>
+            <div class="service-card__footer">
+              <span class="service-price">From ₹3,500</span>
+              <a href="#appointment" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="service-card" data-service="implants">
+            <div class="service-card__icon" style="--icon-color: #8b5cf6;">
+              <i class="fas fa-tooth"></i>
+            </div>
+            <h3>Dental Implants</h3>
+            <p>Permanent tooth replacements that look, feel, and function exactly like natural teeth.</p>
+            <div class="service-card__footer">
+              <span class="service-price">From ₹25,000</span>
+              <a href="#appointment" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="service-card featured-service" data-service="braces">
+            <div class="service-card__badge">Most Popular</div>
+            <div class="service-card__icon" style="--icon-color: #ec4899;">
+              <i class="fas fa-teeth"></i>
+            </div>
+            <h3>Braces & Aligners</h3>
+            <p>Traditional braces and clear Invisalign aligners to straighten your smile discreetly.</p>
+            <div class="service-card__footer">
+              <span class="service-price">From ₹18,000</span>
+              <a href="#appointment" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="service-card" data-service="rootcanal">
+            <div class="service-card__icon" style="--icon-color: #f59e0b;">
+              <i class="fas fa-syringe"></i>
+            </div>
+            <h3>Root Canal</h3>
+            <p>Painless root canal treatment with advanced technology — save your natural tooth.</p>
+            <div class="service-card__footer">
+              <span class="service-price">From ₹4,000</span>
+              <a href="#appointment" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="service-card" data-service="veneer">
+            <div class="service-card__icon" style="--icon-color: #10b981;">
+              <i class="fas fa-star"></i>
+            </div>
+            <h3>Veneers</h3>
+            <p>Thin porcelain shells that instantly correct shape, color, and size of your teeth.</p>
+            <div class="service-card__footer">
+              <span class="service-price">From ₹8,000/tooth</span>
+              <a href="#appointment" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="service-card" data-service="cleaning">
+            <div class="service-card__icon" style="--icon-color: #06b6d4;">
+              <i class="fas fa-pumped-up-kicks"></i>
+              <i class="fas fa-hand-sparkles"></i>
+            </div>
+            <h3>Scaling & Cleaning</h3>
+            <p>Professional plaque removal to keep your gums healthy and breath fresh year-round.</p>
+            <div class="service-card__footer">
+              <span class="service-price">From ₹800</span>
+              <a href="#appointment" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WHY CHOOSE US ===== -->
+    <section class="why-us section" id="why-us">
+      <div class="container why-us__inner">
+        <div class="why-us__content" data-aos="fade-right">
+          <span class="section-tag">Why SmileCare?</span>
+          <h2 class="section-title">We Make Dental Care Simple, <span class="highlight">Comfortable & Affordable</span></h2>
+          <p class="section-desc">Going to the dentist shouldn't feel scary. We combine cutting-edge technology with genuine compassion so every visit feels stress-free.</p>
+
+          <ul class="why-us__list">
+            <li>
+              <div class="why-icon"><i class="fas fa-microscope"></i></div>
+              <div>
+                <strong>Digital X-Rays & 3D Scanning</strong>
+                <span>90% less radiation, instant imaging, precise diagnosis.</span>
+              </div>
+            </li>
+            <li>
+              <div class="why-icon"><i class="fas fa-hand-holding-heart"></i></div>
+              <div>
+                <strong>Painless Injections</strong>
+                <span>We use The Wand® computerized anesthesia — no needle anxiety.</span>
+              </div>
+            </li>
+            <li>
+              <div class="why-icon"><i class="fas fa-rupee-sign"></i></div>
+              <div>
+                <strong>Transparent Pricing</strong>
+                <span>No hidden charges. EMI & all major insurance plans accepted.</span>
+              </div>
+            </li>
+            <li>
+              <div class="why-icon"><i class="fas fa-leaf"></i></div>
+              <div>
+                <strong>Child-Friendly Environment</strong>
+                <span>Special kids' corner and gentle approach for all ages.</span>
+              </div>
+            </li>
+          </ul>
+
+          <a href="#appointment" class="btn btn--primary btn--md">
+            Schedule My Visit <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        <div class="why-us__visual" data-aos="fade-left">
+          <div class="why-us__img-wrap">
+            <img src="clinic-interior.jpg" alt="SmileCare Clinic" id="clinic-img" />
+            <div class="why-badge">
+              <div class="why-badge__circle">
+                <i class="fas fa-award"></i>
+                <strong>Best Dental Clinic</strong>
+                <span>Award 2024</span>
+              </div>
+            </div>
+          </div>
+          <div class="why-us__counters">
+            <div class="counter-card">
+              <strong class="counter" data-target="15">0</strong>+
+              <span>Years in Practice</span>
+            </div>
+            <div class="counter-card">
+              <strong class="counter" data-target="10000">0</strong>+
+              <span>Patients Treated</span>
+            </div>
+            <div class="counter-card">
+              <strong class="counter" data-target="98">0</strong>%
+              <span>Satisfaction Rate</span>
+            </div>
+            <div class="counter-card">
+              <strong class="counter" data-target="6">0</strong>
+              <span>Expert Doctors</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DOCTORS SECTION ===== -->
+    <section class="doctors section" id="doctors">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Our Team</span>
+          <h2 class="section-title">Meet Our <span class="highlight">Expert Doctors</span></h2>
+          <p class="section-desc">Highly qualified, experienced, and genuinely caring dental professionals.</p>
+        </div>
+        <div class="doctors__grid">
+
+          <div class="doctor-card">
+            <div class="doctor-card__img">
+              <img src="https://i.pravatar.cc/300?img=11" alt="Dr. Priya Sharma" />
+              <div class="doctor-card__overlay">
+                <a href="tel:+919876543210" class="btn btn--glass btn--sm">Book Appointment</a>
+              </div>
+            </div>
+            <div class="doctor-card__info">
+              <h3>Dr. Priya Sharma</h3>
+              <span class="doctor-specialty">Senior Orthodontist</span>
+              <div class="doctor-card__details">
+                <span><i class="fas fa-graduation-cap"></i> MDS – Orthodontics, AIIMS</span>
+                <span><i class="fas fa-briefcase"></i> 12 Years Experience</span>
+                <span><i class="fas fa-star"></i> 4.9★ (320 reviews)</span>
+              </div>
+              <p>"I believe every patient deserves a beautiful smile without fear or pain."</p>
+              <div class="doctor-card__social">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="doctor-card featured-doctor">
+            <div class="doctor-card__img">
+              <img src="https://i.pravatar.cc/300?img=67" alt="Dr. Arjun Mehta" />
+              <div class="doctor-card__badge-top">Chief Dentist</div>
+              <div class="doctor-card__overlay">
+                <a href="tel:+919876543210" class="btn btn--glass btn--sm">Book Appointment</a>
+              </div>
+            </div>
+            <div class="doctor-card__info">
+              <h3>Dr. Arjun Mehta</h3>
+              <span class="doctor-specialty">Chief Dental Surgeon</span>
+              <div class="doctor-card__details">
+                <span><i class="fas fa-graduation-cap"></i> BDS, MDS – Oral Surgery, Delhi</span>
+                <span><i class="fas fa-briefcase"></i> 15 Years Experience</span>
+                <span><i class="fas fa-star"></i> 5.0★ (580 reviews)</span>
+              </div>
+              <p>"Transforming smiles using the latest technology with a gentle, patient-first approach."</p>
+              <div class="doctor-card__social">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="doctor-card">
+            <div class="doctor-card__img">
+              <img src="https://i.pravatar.cc/300?img=25" alt="Dr. Sneha Kapoor" />
+              <div class="doctor-card__overlay">
+                <a href="tel:+919876543210" class="btn btn--glass btn--sm">Book Appointment</a>
+              </div>
+            </div>
+            <div class="doctor-card__info">
+              <h3>Dr. Sneha Kapoor</h3>
+              <span class="doctor-specialty">Cosmetic Dentist</span>
+              <div class="doctor-card__details">
+                <span><i class="fas fa-graduation-cap"></i> MDS – Prosthodontics, Mumbai</span>
+                <span><i class="fas fa-briefcase"></i> 8 Years Experience</span>
+                <span><i class="fas fa-star"></i> 4.8★ (210 reviews)</span>
+              </div>
+              <p>"Great smiles change lives. I specialize in crafting smiles that shine with confidence."</p>
+              <div class="doctor-card__social">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== BEFORE/AFTER + PROCESS ===== -->
+    <section class="process section" id="process">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">How It Works</span>
+          <h2 class="section-title">Your Journey to a <span class="highlight">Perfect Smile</span></h2>
+        </div>
+        <div class="process__steps">
+          <div class="process-step">
+            <div class="process-step__num">01</div>
+            <div class="process-step__icon"><i class="fas fa-calendar-alt"></i></div>
+            <h3>Book Online</h3>
+            <p>Choose your preferred date & time via our easy booking form or WhatsApp — instantly confirmed.</p>
+          </div>
+          <div class="process-connector"><i class="fas fa-arrow-right"></i></div>
+          <div class="process-step">
+            <div class="process-step__num">02</div>
+            <div class="process-step__icon"><i class="fas fa-stethoscope"></i></div>
+            <h3>Free Consultation</h3>
+            <p>Our expert dentist examines your teeth, discusses your concerns, and shows you a treatment plan.</p>
+          </div>
+          <div class="process-connector"><i class="fas fa-arrow-right"></i></div>
+          <div class="process-step">
+            <div class="process-step__num">03</div>
+            <div class="process-step__icon"><i class="fas fa-magic"></i></div>
+            <h3>Treatment</h3>
+            <p>Painless, modern treatment using the latest dental technology for best results in minimum visits.</p>
+          </div>
+          <div class="process-connector"><i class="fas fa-arrow-right"></i></div>
+          <div class="process-step">
+            <div class="process-step__num">04</div>
+            <div class="process-step__icon"><i class="fas fa-smile"></i></div>
+            <h3>Enjoy Your Smile</h3>
+            <p>Walk out with a bright, healthy smile and free aftercare support from our team.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section class="testimonials section" id="testimonials">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Patient Reviews</span>
+          <h2 class="section-title">What Our <span class="highlight">Patients Say</span></h2>
+          <p class="section-desc">Real words from real people who trusted us with their smiles.</p>
+          <div class="overall-rating">
+            <div class="rating-stars">★★★★★</div>
+            <strong>4.9 out of 5</strong> based on <span>680+ Google Reviews</span>
+          </div>
+        </div>
+
+        <!-- Testimonial slider -->
+        <div class="testimonial-slider" id="testimonial-slider">
+          <div class="testimonial-track" id="testimonial-track">
+
+            <div class="testimonial-card">
+              <div class="testimonial-top">
+                <img src="https://i.pravatar.cc/60?img=32" alt="Rahul Verma" />
+                <div>
+                  <strong>Rahul Verma</strong>
+                  <span>Teeth Whitening</span>
+                </div>
+                <div class="t-stars">★★★★★</div>
+              </div>
+              <p>"I was so scared of dentists before but Dr. Arjun made everything painless! My teeth are 8 shades whiter and I can't stop smiling. Best clinic in the city!"</p>
+              <div class="testimonial-footer">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/20px-Google_%22G%22_Logo.svg.png" alt="Google" />
+                <span>Verified Google Review</span>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-top">
+                <img src="https://i.pravatar.cc/60?img=47" alt="Priyanka Singh" />
+                <div>
+                  <strong>Priyanka Singh</strong>
+                  <span>Dental Implant</span>
+                </div>
+                <div class="t-stars">★★★★★</div>
+              </div>
+              <p>"The implant procedure was smooth and I felt zero pain. The team is super friendly, the clinic is spotless, and the results are stunning. Highly recommend SmileCare!"</p>
+              <div class="testimonial-footer">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/20px-Google_%22G%22_Logo.svg.png" alt="Google" />
+                <span>Verified Google Review</span>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-top">
+                <img src="https://i.pravatar.cc/60?img=3" alt="Ankita Rawat" />
+                <div>
+                  <strong>Ankita Rawat</strong>
+                  <span>Braces</span>
+                </div>
+                <div class="t-stars">★★★★★</div>
+              </div>
+              <p>"Got clear aligners from Dr. Priya. The entire 14-month journey was amazing. She checked on me every step of the way. My smile transformation is unreal!"</p>
+              <div class="testimonial-footer">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/20px-Google_%22G%22_Logo.svg.png" alt="Google" />
+                <span>Verified Google Review</span>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-top">
+                <img src="https://i.pravatar.cc/60?img=58" alt="Manish Tiwari" />
+                <div>
+                  <strong>Manish Tiwari</strong>
+                  <span>Root Canal</span>
+                </div>
+                <div class="t-stars">★★★★★</div>
+              </div>
+              <p>"I had severe tooth pain and feared a root canal. But the procedure was completely painless! Done in a single visit. The staff and doctors are world-class."</p>
+              <div class="testimonial-footer">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/20px-Google_%22G%22_Logo.svg.png" alt="Google" />
+                <span>Verified Google Review</span>
+              </div>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="testimonial-top">
+                <img src="https://i.pravatar.cc/60?img=15" alt="Sonia Gupta" />
+                <div>
+                  <strong>Sonia Gupta</strong>
+                  <span>Veneers</span>
+                </div>
+                <div class="t-stars">★★★★★</div>
+              </div>
+              <p>"Dr. Sneha gave me the smile of my dreams with veneers! Completely transformed my confidence. Worth every rupee. The clinic itself is gorgeous and hygienic."</p>
+              <div class="testimonial-footer">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/20px-Google_%22G%22_Logo.svg.png" alt="Google" />
+                <span>Verified Google Review</span>
+              </div>
+            </div>
+
+          </div>
+          <!-- Slider controls -->
+          <button class="slider-btn slider-btn--prev" id="slider-prev" aria-label="Previous review">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="slider-btn slider-btn--next" id="slider-next" aria-label="Next review">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+          <div class="slider-dots" id="slider-dots"></div>
+        </div>
+
+        <!-- CTA under testimonials -->
+        <div class="testimonials__cta">
+          <a href="https://g.page/r/YOUR_GOOGLE_REVIEW_LINK" target="_blank" rel="noopener" class="btn btn--outline btn--md">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/20px-Google_%22G%22_Logo.svg.png" alt="G" /> View All Google Reviews
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== APPOINTMENT FORM ===== -->
+    <section class="appointment section" id="appointment">
+      <div class="container appointment__inner">
+        <div class="appointment__info">
+          <span class="section-tag">Get Started</span>
+          <h2 class="section-title">Book Your <span class="highlight">Free Consultation</span></h2>
+          <p>Our team will reach you within 2 hours to confirm your appointment. No prepayment needed!</p>
+          <ul class="appointment__perks">
+            <li><i class="fas fa-check-circle"></i> Free Initial Consultation (₹500 value)</li>
+            <li><i class="fas fa-check-circle"></i> Free X-Ray on First Visit</li>
+            <li><i class="fas fa-check-circle"></i> Instant WhatsApp Confirmation</li>
+            <li><i class="fas fa-check-circle"></i> Flexible Timing – Weekdays & Weekends</li>
+          </ul>
+          <div class="appointment__contact-cards">
+            <a href="tel:+919876543210" class="contact-quick-card">
+              <i class="fas fa-phone"></i>
+              <div>
+                <strong>Call Us</strong>
+                <span>+91 98765 43210</span>
+              </div>
+            </a>
+            <a href="https://wa.me/919876543210" class="contact-quick-card whatsapp-card" target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp"></i>
+              <div>
+                <strong>WhatsApp</strong>
+                <span>Chat Now</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="appointment__form-wrap">
+          <form class="appointment__form" id="appointment-form" novalidate>
+            <h3>Request an Appointment</h3>
+            <div class="form-group">
+              <label for="appt-name">Full Name *</label>
+              <input type="text" id="appt-name" name="name" placeholder="Your full name" required />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="appt-phone">Phone Number *</label>
+                <input type="tel" id="appt-phone" name="phone" placeholder="+91 98765 43210" required />
+              </div>
+              <div class="form-group">
+                <label for="appt-age">Age</label>
+                <input type="number" id="appt-age" name="age" placeholder="Your age" min="1" max="120" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="appt-service">Service Interested In</label>
+              <select id="appt-service" name="service">
+                <option value="">Select a service</option>
+                <option value="whitening">Teeth Whitening</option>
+                <option value="implants">Dental Implants</option>
+                <option value="braces">Braces / Aligners</option>
+                <option value="rootcanal">Root Canal</option>
+                <option value="veneers">Veneers</option>
+                <option value="cleaning">Scaling & Cleaning</option>
+                <option value="checkup">General Checkup</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="appt-date">Preferred Date</label>
+                <input type="date" id="appt-date" name="date" />
+              </div>
+              <div class="form-group">
+                <label for="appt-time">Preferred Time</label>
+                <select id="appt-time" name="time">
+                  <option value="">Select time</option>
+                  <option>09:00 AM – 10:00 AM</option>
+                  <option>10:00 AM – 11:00 AM</option>
+                  <option>11:00 AM – 12:00 PM</option>
+                  <option>12:00 PM – 01:00 PM</option>
+                  <option>02:00 PM – 03:00 PM</option>
+                  <option>03:00 PM – 04:00 PM</option>
+                  <option>04:00 PM – 05:00 PM</option>
+                  <option>06:00 PM – 07:00 PM</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="appt-msg">Describe Your Concern (Optional)</label>
+              <textarea id="appt-msg" name="message" rows="3" placeholder="Any tooth pain, concern, or questions..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full btn--lg" id="appt-submit">
+              <i class="fas fa-calendar-check"></i> Confirm My Appointment
+            </button>
+            <p class="form-note"><i class="fas fa-lock"></i> Your information is 100% private and secure.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GALLERY STRIP ===== -->
+    <section class="gallery section" id="gallery">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Our Clinic</span>
+          <h2 class="section-title">A Clinic You'll <span class="highlight">Love Visiting</span></h2>
+        </div>
+        <div class="gallery__grid">
+          <div class="gallery-item tall">
+            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&q=80" alt="Modern dental chair" loading="lazy"/>
+            <div class="gallery-item__overlay">Modern Equipment</div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1588776814546-1ffbb061e26d?w=600&q=80" alt="Dental consultation" loading="lazy"/>
+            <div class="gallery-item__overlay">Friendly Consultation</div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=600&q=80" alt="Dental treatment" loading="lazy"/>
+            <div class="gallery-item__overlay">Advanced Treatment</div>
+          </div>
+          <div class="gallery-item wide">
+            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80" alt="Clinic waiting room" loading="lazy"/>
+            <div class="gallery-item__overlay">Comfortable Waiting Area</div>
+          </div>
+          <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1571772996211-2f02c9727629?w=600&q=80" alt="Clinic reception" loading="lazy"/>
+            <div class="gallery-item__overlay">Welcoming Reception</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ SECTION ===== -->
+    <section class="faq section" id="faq">
+      <div class="container faq__inner">
+        <div class="faq__header">
+          <span class="section-tag">FAQ</span>
+          <h2 class="section-title">Common <span class="highlight">Questions</span></h2>
+          <p>Can't find your answer? <a href="#appointment">Ask us directly.</a></p>
+        </div>
+        <div class="faq__list">
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              Is the first consultation really free? <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-a">
+              <p>Yes! Your first consultation including a preliminary examination is completely free. No hidden charges. This includes a quick X-ray assessment if needed.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              Are dental implants painful? <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-a">
+              <p>Implant surgery is done under local anesthesia, so you feel no pain during the procedure. Mild soreness after is normal and goes away in 2–3 days. Most patients say it's far more comfortable than they expected.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              Do you offer EMI or payment plans? <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-a">
+              <p>Yes! We offer 0% interest EMI through major banks and accept all leading insurance plans. Our team will help you find the best payment option for your treatment.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              How long does teeth whitening last? <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-a">
+              <p>Professional teeth whitening results typically last 1–3 years depending on your diet and oral habits. We also provide maintenance kits to extend the results.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              Do you treat children? What age is suitable? <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-a">
+              <p>Yes, we see patients of all ages from infants to seniors. We have a specialized pediatric dentist and a fun, child-friendly environment to make kids feel comfortable.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              What are your clinic timings? <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="faq-a">
+              <p>We are open Monday–Saturday 9:00 AM to 8:00 PM and Sundays 10:00 AM to 4:00 PM. Emergency dental care is available 24/7 by phone.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT + MAP ===== -->
+    <section class="contact section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Find Us</span>
+          <h2 class="section-title">Visit <span class="highlight">Our Clinic</span></h2>
+          <p class="section-desc">Centrally located & easily accessible by metro, bus, or car.</p>
+        </div>
+        <div class="contact__inner">
+          <div class="contact__cards">
+            <div class="contact-card">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <strong>Address</strong>
+                <span>123, Smile Street, Near City Hospital,<br/>Connaught Place, New Delhi – 110001</span>
+              </div>
+            </div>
+            <div class="contact-card">
+              <i class="fas fa-phone"></i>
+              <div>
+                <strong>Phone</strong>
+                <span><a href="tel:+919876543210">+91 98765 43210</a></span>
+                <span><a href="tel:+911123456789">+91 11 2345 6789</a></span>
+              </div>
+            </div>
+            <div class="contact-card">
+              <i class="fas fa-envelope"></i>
+              <div>
+                <strong>Email</strong>
+                <span><a href="mailto:hello@smiledental.in">hello@smiledental.in</a></span>
+              </div>
+            </div>
+            <div class="contact-card">
+              <i class="fas fa-clock"></i>
+              <div>
+                <strong>Working Hours</strong>
+                <span>Mon–Sat: 9 AM – 8 PM</span>
+                <span>Sunday: 10 AM – 4 PM</span>
+              </div>
+            </div>
+            <div class="contact__social">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              <a href="https://wa.me/919876543210" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+          <!-- Google Map embed -->
+          <div class="contact__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.7441624637076!2d77.2167!3d28.6315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd37b741d057%3A0xcdee88e47393c3f1!2sConnaught%20Place%2C%20New%20Delhi!5e0!3m2!1sen!2sin!4v1700000000000"
+              width="100%"
+              height="400"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="SmileCare Dental Clinic Location"
+              aria-label="Google map showing clinic location">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <div class="nav__logo">
+          <div class="logo-icon"><i class="fas fa-tooth"></i></div>
+          <div class="logo-text">
+            <span class="logo-primary">SmileCare</span>
+            <span class="logo-sub">Dental Clinic</span>
+          </div>
+        </div>
+        <p>Your trusted dental partner for over 15 years. Advanced care, gentle hands, and smiles that last a lifetime.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="https://wa.me/919876543210" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+      <div class="footer__links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Teeth Whitening</a></li>
+          <li><a href="#services">Dental Implants</a></li>
+          <li><a href="#services">Braces & Aligners</a></li>
+          <li><a href="#services">Root Canal</a></li>
+          <li><a href="#services">Veneers</a></li>
+          <li><a href="#services">Scaling & Cleaning</a></li>
+        </ul>
+      </div>
+      <div class="footer__links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#doctors">Our Doctors</a></li>
+          <li><a href="#why-us">Why Choose Us</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__contact">
+        <h4>Contact</h4>
+        <p><i class="fas fa-map-marker-alt"></i> 123, Smile Street, Connaught Place, New Delhi – 110001</p>
+        <p><i class="fas fa-phone"></i> <a href="tel:+919876543210">+91 98765 43210</a></p>
+        <p><i class="fas fa-envelope"></i> <a href="mailto:hello@smiledental.in">hello@smiledental.in</a></p>
+        <a href="#appointment" class="btn btn--primary btn--sm" style="margin-top: 1rem; display:inline-flex;">Book Appointment</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <div class="container">
+        <p>© 2024 SmileCare Dental Clinic. All rights reserved.</p>
+        <div class="footer__bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Success modal -->
+  <div class="modal" id="success-modal" aria-hidden="true" role="dialog">
+    <div class="modal__inner">
+      <div class="modal__icon"><i class="fas fa-check-circle"></i></div>
+      <h3>Appointment Requested!</h3>
+      <p>Thank you! Our team will call you within 2 hours to confirm your appointment. You'll also receive a WhatsApp confirmation.</p>
+      <button class="btn btn--primary" id="modal-close">Done</button>
+    </div>
+  </div>
+  <div class="modal-overlay" id="modal-overlay"></div>
+
+  <!-- Back to top -->
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
