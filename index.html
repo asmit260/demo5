@@ -3,23 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="SmileCare Dental Clinic – Advanced dental care with compassionate doctors. Book your appointment today for teeth whitening, braces, implants & more." />
-  <meta name="keywords" content="dental clinic, dentist near me, teeth whitening, dental implants, braces, orthodontist, root canal, SmileCare" />
-  <title>SmileCare Dental Clinic | Expert Dental Care You Can Trust</title>
+  <meta name="description" content="Infinity Dental Clinic – Advanced dental care led by Dr. Anmol Billore. Experience premium, pain-free treatments including implants, root canals, and smile makeovers in Indore." />
+  <meta name="keywords" content="dental clinic Indore, dentist near me, Infinity Dental Clinic, Dr. Anmol Billore, teeth whitening, dental implants, braces, root canal, aesthetic dentist" />
+  <title>Infinity Dental Clinic | Dr. Anmol Billore | Expert Dental Care</title>
+  
+  <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" />
+  
+  <!-- CSS Loading Optimization -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <!-- Font Awesome for icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  
+  <!-- Font Awesome deferred to prevent render blocking -->
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- ===== FLOATING WHATSAPP BUTTON ===== -->
-  <a href="https://wa.me/919876543210?text=Hi%2C%20I%20want%20to%20book%20an%20appointment" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp us">
+  <!-- ===== FLOATING WHATSAPP BUTTON (desktop only) ===== -->
+  <a href="https://wa.me/message/YOUR_WHATSAPP_LINK" class="whatsapp-float" target="_blank" rel="noopener" aria-label="WhatsApp us">
     <i class="fab fa-whatsapp"></i>
     <span>Book Now</span>
   </a>
+
+  <!-- ===== MOBILE FLOATING ACTION BAR ===== -->
+  <div class="mobile-fab-bar">
+    <a href="https://wa.me/message/YOUR_WHATSAPP_LINK" class="mobile-fab-btn mobile-fab-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+      <span>WhatsApp</span>
+    </a>
+    <a href="#appointment" class="mobile-fab-btn mobile-fab-book" aria-label="Book Appointment">
+      <i class="fas fa-calendar-check"></i>
+      <span>Book Now</span>
+    </a>
+    <a href="#contact" class="mobile-fab-btn mobile-fab-loc" aria-label="Visit Clinic">
+      <i class="fas fa-map-marker-alt"></i>
+      <span>Location</span>
+    </a>
+  </div>
 
   <!-- ===== STICKY HEADER / NAVBAR ===== -->
   <header class="header" id="header">
@@ -28,7 +51,7 @@
       <a href="#hero" class="nav__logo">
         <div class="logo-icon"><i class="fas fa-tooth"></i></div>
         <div class="logo-text">
-          <span class="logo-primary">SmileCare</span>
+          <span class="logo-primary">Infinity</span>
           <span class="logo-sub">Dental Clinic</span>
         </div>
       </a>
@@ -36,7 +59,7 @@
       <!-- Desktop nav links -->
       <ul class="nav__list" id="nav-list">
         <li><a href="#services" class="nav__link">Services</a></li>
-        <li><a href="#doctors" class="nav__link">Doctors</a></li>
+        <li><a href="#doctors" class="nav__link">Dr. Anmol</a></li>
         <li><a href="#why-us" class="nav__link">Why Us</a></li>
         <li><a href="#testimonials" class="nav__link">Reviews</a></li>
         <li><a href="#contact" class="nav__link">Contact</a></li>
@@ -44,8 +67,8 @@
 
       <!-- Header CTAs -->
       <div class="nav__cta">
-        <a href="tel:+919876543210" class="btn btn--outline btn--sm" id="nav-call-btn">
-          <i class="fas fa-phone"></i> Call Us
+        <a href="#contact" class="btn btn--outline btn--sm" id="nav-call-btn">
+          <i class="fas fa-map-marker-alt"></i> Visit Us
         </a>
         <a href="#appointment" class="btn btn--primary btn--sm" id="nav-appt-btn">
           Book Appointment
@@ -63,16 +86,16 @@
   <div class="mobile-nav" id="mobile-nav" aria-hidden="true">
     <ul class="mobile-nav__list">
       <li><a href="#services" class="mobile-nav__link">Services</a></li>
-      <li><a href="#doctors" class="mobile-nav__link">Doctors</a></li>
+      <li><a href="#doctors" class="mobile-nav__link">Dr. Anmol</a></li>
       <li><a href="#why-us" class="mobile-nav__link">Why Us</a></li>
       <li><a href="#testimonials" class="mobile-nav__link">Reviews</a></li>
       <li><a href="#contact" class="mobile-nav__link">Contact</a></li>
     </ul>
     <div class="mobile-nav__cta">
-      <a href="tel:+919876543210" class="btn btn--outline btn--full">
-        <i class="fas fa-phone"></i> Call: +91 98765 43210
+      <a href="#contact" class="btn btn--outline btn--full">
+        <i class="fas fa-map-marker-alt"></i> Visit Clinic Location
       </a>
-      <a href="https://wa.me/919876543210" class="btn btn--whatsapp btn--full" target="_blank" rel="noopener">
+      <a href="https://wa.me/message/YOUR_WHATSAPP_LINK" class="btn btn--whatsapp btn--full" target="_blank" rel="noopener">
         <i class="fab fa-whatsapp"></i> WhatsApp Us
       </a>
       <a href="#appointment" class="btn btn--primary btn--full">
@@ -91,65 +114,65 @@
       <div class="container hero__inner">
         <div class="hero__content" data-aos="fade-right">
           <div class="hero__badge">
-            <i class="fas fa-shield-heart"></i> Trusted by 10,000+ Patients in Your City
+            <i class="fas fa-shield-heart"></i> Premium Dental Care in Indore
           </div>
           <h1 class="hero__title">
-            Your Perfect Smile <br/>
-            <span class="highlight">Starts Here</span>
+            Transforming Smiles with <br/>
+            <span class="highlight">Modern Precision</span>
           </h1>
           <p class="hero__subtitle">
-            Advanced dental care with a gentle touch. From routine cleanings to full smile makeovers — we've got every tooth covered.
+            Experience pain-free, comfortable, and highly effective dental treatments led by Dr. Anmol Billore. We make dentistry a premium, relaxing experience.
           </p>
           <div class="hero__stats">
             <div class="stat">
-              <strong>15+</strong><span>Years Experience</span>
+              <strong>16+</strong><span>Years Experience</span>
             </div>
             <div class="stat-divider"></div>
             <div class="stat">
-              <strong>10K+</strong><span>Happy Patients</span>
+              <strong>15+</strong><span>Years Specialist</span>
             </div>
             <div class="stat-divider"></div>
-            <div class="stat">
-              <strong>4.9★</strong><span>Google Rating</span>
+            <div class="stat" style="display:flex; flex-direction:column; align-items:center;">
+              <strong><i class="fas fa-check-circle" style="color:var(--green); font-size: 1.4rem;"></i></strong><span style="margin-top:0.2rem;">Verified Reg</span>
             </div>
           </div>
           <div class="hero__actions">
             <a href="#appointment" class="btn btn--primary btn--lg" id="hero-appt-btn">
-              <i class="fas fa-calendar-check"></i> Book Free Consultation
+              <i class="fas fa-calendar-check"></i> Book Consultation
             </a>
-            <a href="tel:+919876543210" class="btn btn--glass btn--lg" id="hero-call-btn">
-              <i class="fas fa-phone"></i> +91 98765 43210
+            <a href="https://wa.me/message/YOUR_WHATSAPP_LINK" class="btn btn--glass btn--lg" id="hero-call-btn" style="color:#0f172a; border-color:var(--border);">
+              <i class="fab fa-whatsapp" style="color:var(--whatsapp);"></i> WhatsApp Us
             </a>
-          </div>
-          <div class="hero__trust">
-            <div class="trust-avatars">
-              <img src="https://i.pravatar.cc/40?img=1" alt="Patient 1" />
-              <img src="https://i.pravatar.cc/40?img=5" alt="Patient 2" />
-              <img src="https://i.pravatar.cc/40?img=9" alt="Patient 3" />
-              <img src="https://i.pravatar.cc/40?img=12" alt="Patient 4" />
-            </div>
-            <p>Join thousands of happy patients already smiling with us!</p>
           </div>
         </div>
+        <!-- DESKTOP visual -->
         <div class="hero__visual" data-aos="fade-left">
           <div class="hero__img-wrap">
             <div class="hero__img-glow"></div>
-            <img src="hero-doctor.jpg" alt="SmileCare Doctor" class="hero__img" id="hero-img" />
+            <img src="dr-billore.jpg" alt="Dr Anmol Billore – Infinity Dental Clinic" class="hero__img" id="hero-img" fetchpriority="high" />
             <!-- Floating badge -->
             <div class="hero__badge-float badge-left">
-              <i class="fas fa-star" style="color:#fbbf24;"></i>
+              <i class="fas fa-user-md" style="color:#0ea5e9;"></i>
               <div>
-                <strong>4.9/5</strong>
-                <span>Google Reviews</span>
+                <strong>Expert Surgeon</strong>
+                <span>Dr. Anmol Billore</span>
               </div>
             </div>
             <div class="hero__badge-float badge-right">
-              <i class="fas fa-calendar-check" style="color:#22c55e;"></i>
+              <i class="fas fa-tooth" style="color:#22c55e;"></i>
               <div>
-                <strong>24/7</strong>
-                <span>Appointments</span>
+                <strong>Painless</strong>
+                <span>Treatments</span>
               </div>
             </div>
+          </div>
+        </div>
+        <!-- MOBILE-ONLY doctor photo thumbnail in hero -->
+        <div class="hero__mobile-doc">
+          <img src="dr-billore.jpg" alt="Dr. Anmol Billore" class="hero__mobile-doc-img" fetchpriority="high" />
+          <div class="hero__mobile-doc-label">
+            <span>Dr. Anmol Billore</span>
+            <em>BDS · Implantologist</em>
           </div>
         </div>
       </div>
@@ -166,24 +189,103 @@
       <div class="container trust-strip__inner">
         <div class="trust-item">
           <i class="fas fa-user-md"></i>
-          <span>Board-Certified Dentists</span>
+          <span>16+ Years Experience</span>
         </div>
         <div class="trust-item">
-          <i class="fas fa-shield-virus"></i>
-          <span>Clinic Sterilized Daily</span>
+          <i class="fas fa-microscope"></i>
+          <span>Modern Dental Technologies</span>
         </div>
         <div class="trust-item">
           <i class="fas fa-tooth"></i>
-          <span>Painless Procedures</span>
+          <span>Pain-Free Procedures</span>
         </div>
         <div class="trust-item">
-          <i class="fas fa-money-bill-wave"></i>
-          <span>EMI Available / Insurance</span>
+          <i class="fas fa-medal"></i>
+          <span>Highest Standards of Patient Care</span>
         </div>
-        <div class="trust-item">
-          <i class="fas fa-clock"></i>
-          <span>Same Day Appointments</span>
+      </div>
+    </section>
+    
+    <!-- ===== DOCTORS SECTION ===== -->
+    <section class="doctors section" id="doctors">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Meet the Doctor</span>
+          <h2 class="section-title">Dr. <span class="highlight">Anmol Billore</span></h2>
+          <p class="section-desc">BDS | Dental &amp; Cosmetic Surgeon | Implantologist</p>
         </div>
+
+        <!-- DESKTOP horizontal doctor profile card -->
+        <div class="doctor-profile-card doctors__desktop-card">
+          <!-- Left: Photo -->
+          <div class="doctor-profile-card__photo">
+            <img src="dr-billore.jpg" alt="Dr. Anmol Billore – Infinity Dental Clinic" loading="lazy" />
+            <div class="doctor-profile-card__verified">
+              <i class="fas fa-check-circle"></i> MCI Verified
+            </div>
+          </div>
+          <!-- Right: Info -->
+          <div class="doctor-profile-card__info">
+            <div class="doctor-profile-card__header">
+              <div>
+                <h3>Dr. Anmol Billore</h3>
+                <span class="doctor-profile-card__deg">BDS – Modern Dental College &amp; Research Centre, Indore</span>
+              </div>
+              <span class="doctor-profile-card__badge">Chief Dental &amp; Cosmetic Surgeon</span>
+            </div>
+
+            <div class="doctor-profile-card__specialties">
+              <span><i class="fas fa-tooth"></i> Dentist</span>
+              <span><i class="fas fa-star"></i> Cosmetic / Aesthetic Dentist</span>
+              <span><i class="fas fa-user-md"></i> Dental Surgeon</span>
+              <span><i class="fas fa-bone"></i> Implantologist</span>
+            </div>
+
+            <div class="doctor-profile-card__stats">
+              <div class="dps">
+                <strong>16+</strong>
+                <span>Years Overall Experience</span>
+              </div>
+              <div class="dps">
+                <strong>15+</strong>
+                <span>Years as Specialist</span>
+              </div>
+              <div class="dps">
+                <strong>25+</strong>
+                <span>Dental Services</span>
+              </div>
+            </div>
+
+            <blockquote class="doctor-profile-card__quote">
+              "My mission is to provide pain-free, comfortable, and effective dental treatments using modern dental technologies — transforming traditional dentistry into a premium care experience."
+            </blockquote>
+
+            <div class="doctor-profile-card__awards">
+              <i class="fas fa-award"></i>
+              <span>Official Dentist – Mood Indigo, IIT Bombay (2010)</span>
+            </div>
+
+            <a href="#appointment" class="btn btn--primary btn--md">Book a Consultation <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- MOBILE compact doctor card (shown only on mobile via CSS) -->
+        <div class="doctor-mobile-card">
+          <div class="doctor-mobile-card__photo">
+            <img src="dr-billore.jpg" alt="Dr. Anmol Billore" loading="lazy" />
+          </div>
+          <div class="doctor-mobile-card__info">
+            <h3>Dr. Anmol Billore</h3>
+            <span class="doctor-mobile-card__qual">BDS · Cosmetic Dentist · Implantologist</span>
+            <div class="doctor-mobile-card__tags">
+              <span><i class="fas fa-briefcase"></i> 16+ Yrs Experience</span>
+              <span><i class="fas fa-check-circle"></i> Verified Registration</span>
+              <span><i class="fas fa-award"></i> IIT Bombay Recognition</span>
+            </div>
+            <a href="#appointment" class="btn btn--primary btn--sm" style="align-self:flex-start; margin-top:0.5rem;">Book Consultation</a>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -193,81 +295,139 @@
         <div class="section-header">
           <span class="section-tag">What We Offer</span>
           <h2 class="section-title">Comprehensive <span class="highlight">Dental Services</span></h2>
-          <p class="section-desc">From everyday checkups to complete smile transformations — all under one roof.</p>
+          <p class="section-desc">From complex implantology to complete smile transformations — precision and care in every treatment.</p>
         </div>
-        <div class="services__grid">
+        <!-- Mobile-optimized 2-col compact cards (visible on mobile) -->
+        <div class="services-mobile-grid" id="services-mobile-grid">
+          <a href="#appointment" class="svc-mini-card">
+            <div class="svc-mini-icon" style="--icon-color:#3b82f6;"><i class="fas fa-tooth"></i></div>
+            <span>Implants &amp; Grafting</span>
+          </a>
+          <a href="#appointment" class="svc-mini-card">
+            <div class="svc-mini-icon" style="--icon-color:#8b5cf6;"><i class="fas fa-smile-beam"></i></div>
+            <span>Smile Design</span>
+          </a>
+          <a href="#appointment" class="svc-mini-card">
+            <div class="svc-mini-icon" style="--icon-color:#ec4899;"><i class="fas fa-crown"></i></div>
+            <span>Crowns &amp; Bridges</span>
+          </a>
+          <a href="#appointment" class="svc-mini-card">
+            <div class="svc-mini-icon" style="--icon-color:#f59e0b;"><i class="fas fa-syringe"></i></div>
+            <span>Root Canal (RCT)</span>
+          </a>
+          <a href="#appointment" class="svc-mini-card">
+            <div class="svc-mini-icon" style="--icon-color:#10b981;"><i class="fas fa-teeth"></i></div>
+            <span>Braces &amp; Ortho</span>
+          </a>
+          <a href="#appointment" class="svc-mini-card">
+            <div class="svc-mini-icon" style="--icon-color:#06b6d4;"><i class="fas fa-hand-sparkles"></i></div>
+            <span>Scaling &amp; Polishing</span>
+          </a>
+          <!-- Hidden extra cards shown on expand -->
+          <a href="#appointment" class="svc-mini-card svc-extra">
+            <div class="svc-mini-icon" style="--icon-color:#ef4444;"><i class="fas fa-tooth"></i></div>
+            <span>Tooth Extraction</span>
+          </a>
+          <a href="#appointment" class="svc-mini-card svc-extra">
+            <div class="svc-mini-icon" style="--icon-color:#64748b;"><i class="fas fa-stethoscope"></i></div>
+            <span>General Dentistry</span>
+          </a>
+        </div>
+        <div class="services-mobile-more">
+          <button class="btn btn--outline btn--sm" id="view-all-services-btn">
+            <i class="fas fa-th"></i> View All Services
+          </button>
+        </div>
 
-          <div class="service-card" data-service="whitening">
+        <!-- DESKTOP full cards grid (hidden on mobile) -->
+        <div class="services__grid services__desktop-grid">
+
+          <div class="service-card featured-service" data-service="implants">
+            <div class="service-card__badge">Highly Specialized</div>
             <div class="service-card__icon" style="--icon-color: #3b82f6;">
-              <i class="fas fa-smile-beam"></i>
-            </div>
-            <h3>Teeth Whitening</h3>
-            <p>Professional in-office whitening that delivers 6–8 shades brighter smile in just one session.</p>
-            <div class="service-card__footer">
-              <span class="service-price">From ₹3,500</span>
-              <a href="#appointment" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
-            </div>
-          </div>
-
-          <div class="service-card" data-service="implants">
-            <div class="service-card__icon" style="--icon-color: #8b5cf6;">
               <i class="fas fa-tooth"></i>
             </div>
-            <h3>Dental Implants</h3>
-            <p>Permanent tooth replacements that look, feel, and function exactly like natural teeth.</p>
+            <h3>Implantology &amp; Bone Grafting</h3>
+            <p>Artificial teeth implants matching natural function perfectly. Includes expert bone grafting for dental implants to ensure stable restoration.</p>
             <div class="service-card__footer">
-              <span class="service-price">From ₹25,000</span>
-              <a href="#appointment" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
+              <a href="#appointment" class="service-link">Consult Now <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
 
-          <div class="service-card featured-service" data-service="braces">
-            <div class="service-card__badge">Most Popular</div>
+          <div class="service-card" data-service="smile">
+            <div class="service-card__icon" style="--icon-color: #8b5cf6;">
+              <i class="fas fa-smile-beam"></i>
+            </div>
+            <h3>Smile Makeover &amp; Design</h3>
+            <p>Cosmetic and aesthetic dentistry focusing on transforming your smile by correcting flaws, improving alignment, and fixing dental gaps.</p>
+            <div class="service-card__footer">
+              <a href="#appointment" class="service-link">Consult Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+
+          <div class="service-card" data-service="crowns">
             <div class="service-card__icon" style="--icon-color: #ec4899;">
-              <i class="fas fa-teeth"></i>
+              <i class="fas fa-crown"></i>
             </div>
-            <h3>Braces & Aligners</h3>
-            <p>Traditional braces and clear Invisalign aligners to straighten your smile discreetly.</p>
+            <h3>Crowns, Bridges &amp; Dentures</h3>
+            <p>Durable Zirconia and Ceramic crowns, bridges fixing, alongside comprehensive partial and complete dentures fitted securely.</p>
             <div class="service-card__footer">
-              <span class="service-price">From ₹18,000</span>
-              <a href="#appointment" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
+              <a href="#appointment" class="service-link">Consult Now <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
 
-          <div class="service-card" data-service="rootcanal">
+          <div class="service-card" data-service="rct">
             <div class="service-card__icon" style="--icon-color: #f59e0b;">
               <i class="fas fa-syringe"></i>
             </div>
-            <h3>Root Canal</h3>
-            <p>Painless root canal treatment with advanced technology — save your natural tooth.</p>
+            <h3>Single Sitting RCT</h3>
+            <p>Advanced Root Canal Treatment completed in a single session utilizing modern tech for an entirely pain-free experience.</p>
             <div class="service-card__footer">
-              <span class="service-price">From ₹4,000</span>
-              <a href="#appointment" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
+              <a href="#appointment" class="service-link">Consult Now <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
 
-          <div class="service-card" data-service="veneer">
-            <div class="service-card__icon" style="--icon-color: #10b981;">
-              <i class="fas fa-star"></i>
+          <div class="service-card" data-service="extraction">
+            <div class="service-card__icon" style="--icon-color: #ef4444;">
+              <i class="fas fa-tooth"></i>
             </div>
-            <h3>Veneers</h3>
-            <p>Thin porcelain shells that instantly correct shape, color, and size of your teeth.</p>
+            <h3>Surgical &amp; Wisdom Tooth Extraction</h3>
+            <p>Precise, painless impacted teeth and wisdom tooth extractions ensuring minimum recovery time and immediate relief.</p>
             <div class="service-card__footer">
-              <span class="service-price">From ₹8,000/tooth</span>
-              <a href="#appointment" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
+              <a href="#appointment" class="service-link">Consult Now <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
 
           <div class="service-card" data-service="cleaning">
             <div class="service-card__icon" style="--icon-color: #06b6d4;">
-              <i class="fas fa-pumped-up-kicks"></i>
               <i class="fas fa-hand-sparkles"></i>
             </div>
-            <h3>Scaling & Cleaning</h3>
-            <p>Professional plaque removal to keep your gums healthy and breath fresh year-round.</p>
+            <h3>Scaling &amp; Polishing</h3>
+            <p>Professional teeth cleaning and intensive tooth polishing for remarkably fresh breath, healthy gums, and exceptional hygiene.</p>
             <div class="service-card__footer">
-              <span class="service-price">From ₹800</span>
-              <a href="#appointment" class="service-link">Book Now <i class="fas fa-arrow-right"></i></a>
+              <a href="#appointment" class="service-link">Consult Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          
+          <div class="service-card" data-service="ortho" data-mobile-hidden>
+            <div class="service-card__icon" style="--icon-color: #10b981;">
+              <i class="fas fa-teeth"></i>
+            </div>
+            <h3>Braces &amp; Presurgical Orthodontics</h3>
+            <p>Highly effective braces tailored for both adults and teens to ensure perfect teeth alignment and long-term joint health.</p>
+            <div class="service-card__footer">
+              <a href="#appointment" class="service-link">Consult Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          
+          <div class="service-card" data-service="general" data-mobile-hidden>
+            <div class="service-card__icon" style="--icon-color: #64748b;">
+              <i class="fas fa-stethoscope"></i>
+            </div>
+            <h3>General &amp; Conservative Dentistry</h3>
+            <p>Comprehensive TMJ therapy, resilient dental fillings, and regular conservative care designed around premium patient comfort.</p>
+            <div class="service-card__footer">
+              <a href="#appointment" class="service-link">Consult Now <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
 
@@ -279,37 +439,37 @@
     <section class="why-us section" id="why-us">
       <div class="container why-us__inner">
         <div class="why-us__content" data-aos="fade-right">
-          <span class="section-tag">Why SmileCare?</span>
-          <h2 class="section-title">We Make Dental Care Simple, <span class="highlight">Comfortable & Affordable</span></h2>
-          <p class="section-desc">Going to the dentist shouldn't feel scary. We combine cutting-edge technology with genuine compassion so every visit feels stress-free.</p>
+          <span class="section-tag">Why Infinity Dental Clinic?</span>
+          <h2 class="section-title">Premium Dental Care, <span class="highlight">Unmatched Comfort</span></h2>
+          <p class="section-desc">We combine advanced dentistry with an unparalleled commitment to premium patient care. No fear, no complications—just perfection.</p>
 
           <ul class="why-us__list">
             <li>
               <div class="why-icon"><i class="fas fa-microscope"></i></div>
               <div>
-                <strong>Digital X-Rays & 3D Scanning</strong>
-                <span>90% less radiation, instant imaging, precise diagnosis.</span>
+                <strong>Modern Dental Technologies</strong>
+                <span>Experience fast, precise, and completely effective diagnosis and treatments.</span>
               </div>
             </li>
             <li>
               <div class="why-icon"><i class="fas fa-hand-holding-heart"></i></div>
               <div>
-                <strong>Painless Injections</strong>
-                <span>We use The Wand® computerized anesthesia — no needle anxiety.</span>
+                <strong>Pain-Free Assurances</strong>
+                <span>Specialized techniques focused exclusively on making your visit completely comfortable.</span>
               </div>
             </li>
             <li>
-              <div class="why-icon"><i class="fas fa-rupee-sign"></i></div>
+              <div class="why-icon"><i class="fas fa-award"></i></div>
               <div>
-                <strong>Transparent Pricing</strong>
-                <span>No hidden charges. EMI & all major insurance plans accepted.</span>
+                <strong>16+ Years Expertise</strong>
+                <span>Guided entirely by Dr. Anmol Billore, mastering complex procedures flawlessly.</span>
               </div>
             </li>
             <li>
-              <div class="why-icon"><i class="fas fa-leaf"></i></div>
+              <div class="why-icon"><i class="fas fa-shield-virus"></i></div>
               <div>
-                <strong>Child-Friendly Environment</strong>
-                <span>Special kids' corner and gentle approach for all ages.</span>
+                <strong>Strict Sanitization Standards</strong>
+                <span>A flawless, hygienic clinical environment guaranteeing maximum safety.</span>
               </div>
             </li>
           </ul>
@@ -320,122 +480,30 @@
         </div>
         <div class="why-us__visual" data-aos="fade-left">
           <div class="why-us__img-wrap">
-            <img src="clinic-interior.jpg" alt="SmileCare Clinic" id="clinic-img" />
+            <img src="clinic-interior.jpg" alt="Infinity Dental Clinic Interior" id="clinic-img" loading="lazy" />
             <div class="why-badge">
               <div class="why-badge__circle">
-                <i class="fas fa-award"></i>
-                <strong>Best Dental Clinic</strong>
-                <span>Award 2024</span>
+                <i class="fas fa-medal"></i>
+                <strong>Premium Care</strong>
+                <span>Indore</span>
               </div>
             </div>
           </div>
-          <div class="why-us__counters">
-            <div class="counter-card">
-              <strong class="counter" data-target="15">0</strong>+
-              <span>Years in Practice</span>
+          <div class="why-us__counters" style="grid-template-columns: 1fr 1fr;">
+            <div class="counter-card" style="grid-column: span 1;">
+              <strong class="counter" data-target="16">0</strong>+
+              <span>Years Experience</span>
             </div>
-            <div class="counter-card">
-              <strong class="counter" data-target="10000">0</strong>+
-              <span>Patients Treated</span>
-            </div>
-            <div class="counter-card">
-              <strong class="counter" data-target="98">0</strong>%
-              <span>Satisfaction Rate</span>
-            </div>
-            <div class="counter-card">
-              <strong class="counter" data-target="6">0</strong>
-              <span>Expert Doctors</span>
+            <div class="counter-card" style="grid-column: span 1;">
+              <strong class="counter" data-target="25">0</strong>+
+              <span>Dental Services</span>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== DOCTORS SECTION ===== -->
-    <section class="doctors section" id="doctors">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Our Team</span>
-          <h2 class="section-title">Meet Our <span class="highlight">Expert Doctors</span></h2>
-          <p class="section-desc">Highly qualified, experienced, and genuinely caring dental professionals.</p>
-        </div>
-        <div class="doctors__grid">
-
-          <div class="doctor-card">
-            <div class="doctor-card__img">
-              <img src="https://i.pravatar.cc/300?img=11" alt="Dr. Priya Sharma" />
-              <div class="doctor-card__overlay">
-                <a href="tel:+919876543210" class="btn btn--glass btn--sm">Book Appointment</a>
-              </div>
-            </div>
-            <div class="doctor-card__info">
-              <h3>Dr. Priya Sharma</h3>
-              <span class="doctor-specialty">Senior Orthodontist</span>
-              <div class="doctor-card__details">
-                <span><i class="fas fa-graduation-cap"></i> MDS – Orthodontics, AIIMS</span>
-                <span><i class="fas fa-briefcase"></i> 12 Years Experience</span>
-                <span><i class="fas fa-star"></i> 4.9★ (320 reviews)</span>
-              </div>
-              <p>"I believe every patient deserves a beautiful smile without fear or pain."</p>
-              <div class="doctor-card__social">
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="doctor-card featured-doctor">
-            <div class="doctor-card__img">
-              <img src="https://i.pravatar.cc/300?img=67" alt="Dr. Arjun Mehta" />
-              <div class="doctor-card__badge-top">Chief Dentist</div>
-              <div class="doctor-card__overlay">
-                <a href="tel:+919876543210" class="btn btn--glass btn--sm">Book Appointment</a>
-              </div>
-            </div>
-            <div class="doctor-card__info">
-              <h3>Dr. Arjun Mehta</h3>
-              <span class="doctor-specialty">Chief Dental Surgeon</span>
-              <div class="doctor-card__details">
-                <span><i class="fas fa-graduation-cap"></i> BDS, MDS – Oral Surgery, Delhi</span>
-                <span><i class="fas fa-briefcase"></i> 15 Years Experience</span>
-                <span><i class="fas fa-star"></i> 5.0★ (580 reviews)</span>
-              </div>
-              <p>"Transforming smiles using the latest technology with a gentle, patient-first approach."</p>
-              <div class="doctor-card__social">
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="doctor-card">
-            <div class="doctor-card__img">
-              <img src="https://i.pravatar.cc/300?img=25" alt="Dr. Sneha Kapoor" />
-              <div class="doctor-card__overlay">
-                <a href="tel:+919876543210" class="btn btn--glass btn--sm">Book Appointment</a>
-              </div>
-            </div>
-            <div class="doctor-card__info">
-              <h3>Dr. Sneha Kapoor</h3>
-              <span class="doctor-specialty">Cosmetic Dentist</span>
-              <div class="doctor-card__details">
-                <span><i class="fas fa-graduation-cap"></i> MDS – Prosthodontics, Mumbai</span>
-                <span><i class="fas fa-briefcase"></i> 8 Years Experience</span>
-                <span><i class="fas fa-star"></i> 4.8★ (210 reviews)</span>
-              </div>
-              <p>"Great smiles change lives. I specialize in crafting smiles that shine with confidence."</p>
-              <div class="doctor-card__social">
-                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== BEFORE/AFTER + PROCESS ===== -->
+    <!-- ===== PROCESS / HOW IT WORKS ===== -->
     <section class="process section" id="process">
       <div class="container">
         <div class="section-header">
@@ -446,147 +514,91 @@
           <div class="process-step">
             <div class="process-step__num">01</div>
             <div class="process-step__icon"><i class="fas fa-calendar-alt"></i></div>
-            <h3>Book Online</h3>
-            <p>Choose your preferred date & time via our easy booking form or WhatsApp — instantly confirmed.</p>
+            <h3>Book Appointment</h3>
+            <p>Schedule your visit at Infinity Dental Clinic via our swift online form or WhatsApp easily.</p>
           </div>
           <div class="process-connector"><i class="fas fa-arrow-right"></i></div>
           <div class="process-step">
             <div class="process-step__num">02</div>
             <div class="process-step__icon"><i class="fas fa-stethoscope"></i></div>
-            <h3>Free Consultation</h3>
-            <p>Our expert dentist examines your teeth, discusses your concerns, and shows you a treatment plan.</p>
+            <h3>Expert Consultation</h3>
+            <p>Dr. Anmol Billore will thoroughly examine you and craft an exact, customized treatment plan.</p>
           </div>
           <div class="process-connector"><i class="fas fa-arrow-right"></i></div>
           <div class="process-step">
             <div class="process-step__num">03</div>
             <div class="process-step__icon"><i class="fas fa-magic"></i></div>
-            <h3>Treatment</h3>
-            <p>Painless, modern treatment using the latest dental technology for best results in minimum visits.</p>
+            <h3>Pain-Free Treatment</h3>
+            <p>Experience precise, modern dental interventions designed strictly around your ultimate comfort.</p>
           </div>
           <div class="process-connector"><i class="fas fa-arrow-right"></i></div>
           <div class="process-step">
             <div class="process-step__num">04</div>
             <div class="process-step__icon"><i class="fas fa-smile"></i></div>
             <h3>Enjoy Your Smile</h3>
-            <p>Walk out with a bright, healthy smile and free aftercare support from our team.</p>
+            <p>Walk out with newfound confidence, accompanied by dedicated follow-through maintenance advice.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== TESTIMONIALS ===== -->
+    <!-- ===== TESTIMONIALS (Mock preserved for layout demonstration) ===== -->
     <section class="testimonials section" id="testimonials">
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Patient Reviews</span>
           <h2 class="section-title">What Our <span class="highlight">Patients Say</span></h2>
-          <p class="section-desc">Real words from real people who trusted us with their smiles.</p>
+          <p class="section-desc">Experience real premium dentistry outcomes spoken by our visitors.</p>
           <div class="overall-rating">
             <div class="rating-stars">★★★★★</div>
-            <strong>4.9 out of 5</strong> based on <span>680+ Google Reviews</span>
+            <strong>Highly Recommended</strong>
           </div>
         </div>
 
-        <!-- Testimonial slider -->
         <div class="testimonial-slider" id="testimonial-slider">
           <div class="testimonial-track" id="testimonial-track">
 
             <div class="testimonial-card">
               <div class="testimonial-top">
-                <img src="https://i.pravatar.cc/60?img=32" alt="Rahul Verma" />
+                <img src="https://i.pravatar.cc/60?img=32" alt="Patient Review" loading="lazy" />
                 <div>
-                  <strong>Rahul Verma</strong>
-                  <span>Teeth Whitening</span>
+                  <strong>Aesthetic Dentistry</strong>
+                  <span>Smile Makeover</span>
                 </div>
                 <div class="t-stars">★★★★★</div>
               </div>
-              <p>"I was so scared of dentists before but Dr. Arjun made everything painless! My teeth are 8 shades whiter and I can't stop smiling. Best clinic in the city!"</p>
-              <div class="testimonial-footer">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/20px-Google_%22G%22_Logo.svg.png" alt="Google" />
-                <span>Verified Google Review</span>
-              </div>
+              <p>"Dr. Anmol completely transformed how I smile! The clinical experience was incredible and the procedure was genuinely painless. Truly the best dental facility in Indore."</p>
             </div>
 
             <div class="testimonial-card">
               <div class="testimonial-top">
-                <img src="https://i.pravatar.cc/60?img=47" alt="Priyanka Singh" />
+                <img src="https://i.pravatar.cc/60?img=47" alt="Patient Review" loading="lazy" />
                 <div>
-                  <strong>Priyanka Singh</strong>
-                  <span>Dental Implant</span>
+                  <strong>Dental Implant</strong>
+                  <span>Implantology</span>
                 </div>
                 <div class="t-stars">★★★★★</div>
               </div>
-              <p>"The implant procedure was smooth and I felt zero pain. The team is super friendly, the clinic is spotless, and the results are stunning. Highly recommend SmileCare!"</p>
-              <div class="testimonial-footer">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/20px-Google_%22G%22_Logo.svg.png" alt="Google" />
-                <span>Verified Google Review</span>
-              </div>
+              <p>"I visited Infinity Dental Clinic for an artificial tooth implant. Dr. Billore is phenomenal. The care standard is supreme and there was entirely no discomfort."</p>
             </div>
 
             <div class="testimonial-card">
               <div class="testimonial-top">
-                <img src="https://i.pravatar.cc/60?img=3" alt="Ankita Rawat" />
+                <img src="https://i.pravatar.cc/60?img=3" alt="Patient Review" loading="lazy" />
                 <div>
-                  <strong>Ankita Rawat</strong>
-                  <span>Braces</span>
-                </div>
-                <div class="t-stars">★★★★★</div>
-              </div>
-              <p>"Got clear aligners from Dr. Priya. The entire 14-month journey was amazing. She checked on me every step of the way. My smile transformation is unreal!"</p>
-              <div class="testimonial-footer">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/20px-Google_%22G%22_Logo.svg.png" alt="Google" />
-                <span>Verified Google Review</span>
-              </div>
-            </div>
-
-            <div class="testimonial-card">
-              <div class="testimonial-top">
-                <img src="https://i.pravatar.cc/60?img=58" alt="Manish Tiwari" />
-                <div>
-                  <strong>Manish Tiwari</strong>
+                  <strong>Single Sitting RCT</strong>
                   <span>Root Canal</span>
                 </div>
                 <div class="t-stars">★★★★★</div>
               </div>
-              <p>"I had severe tooth pain and feared a root canal. But the procedure was completely painless! Done in a single visit. The staff and doctors are world-class."</p>
-              <div class="testimonial-footer">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/20px-Google_%22G%22_Logo.svg.png" alt="Google" />
-                <span>Verified Google Review</span>
-              </div>
-            </div>
-
-            <div class="testimonial-card">
-              <div class="testimonial-top">
-                <img src="https://i.pravatar.cc/60?img=15" alt="Sonia Gupta" />
-                <div>
-                  <strong>Sonia Gupta</strong>
-                  <span>Veneers</span>
-                </div>
-                <div class="t-stars">★★★★★</div>
-              </div>
-              <p>"Dr. Sneha gave me the smile of my dreams with veneers! Completely transformed my confidence. Worth every rupee. The clinic itself is gorgeous and hygienic."</p>
-              <div class="testimonial-footer">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/20px-Google_%22G%22_Logo.svg.png" alt="Google" />
-                <span>Verified Google Review</span>
-              </div>
+              <p>"I went in fearing a Root Canal, but it was resolved efficiently in a single setting! I am thoroughly impressed by the premium comfort and transparency from start to finish."</p>
             </div>
 
           </div>
           <!-- Slider controls -->
-          <button class="slider-btn slider-btn--prev" id="slider-prev" aria-label="Previous review">
-            <i class="fas fa-chevron-left"></i>
-          </button>
-          <button class="slider-btn slider-btn--next" id="slider-next" aria-label="Next review">
-            <i class="fas fa-chevron-right"></i>
-          </button>
+          <button class="slider-btn slider-btn--prev" id="slider-prev" aria-label="Previous review"><i class="fas fa-chevron-left"></i></button>
+          <button class="slider-btn slider-btn--next" id="slider-next" aria-label="Next review"><i class="fas fa-chevron-right"></i></button>
           <div class="slider-dots" id="slider-dots"></div>
-        </div>
-
-        <!-- CTA under testimonials -->
-        <div class="testimonials__cta">
-          <a href="https://g.page/r/YOUR_GOOGLE_REVIEW_LINK" target="_blank" rel="noopener" class="btn btn--outline btn--md">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/20px-Google_%22G%22_Logo.svg.png" alt="G" /> View All Google Reviews
-          </a>
         </div>
       </div>
     </section>
@@ -596,34 +608,18 @@
       <div class="container appointment__inner">
         <div class="appointment__info">
           <span class="section-tag">Get Started</span>
-          <h2 class="section-title">Book Your <span class="highlight">Free Consultation</span></h2>
-          <p>Our team will reach you within 2 hours to confirm your appointment. No prepayment needed!</p>
+          <h2 class="section-title">Book Your <span class="highlight">Appointment</span></h2>
+          <p>Schedule your priority dental visit easily. Fill the details or reach out to us through WhatsApp instantly.</p>
           <ul class="appointment__perks">
-            <li><i class="fas fa-check-circle"></i> Free Initial Consultation (₹500 value)</li>
-            <li><i class="fas fa-check-circle"></i> Free X-Ray on First Visit</li>
+            <li><i class="fas fa-check-circle"></i> Rapid Appointment Scheduling</li>
+            <li><i class="fas fa-check-circle"></i> Direct Supervision by Dr. Anmol Billore</li>
             <li><i class="fas fa-check-circle"></i> Instant WhatsApp Confirmation</li>
-            <li><i class="fas fa-check-circle"></i> Flexible Timing – Weekdays & Weekends</li>
+            <li><i class="fas fa-check-circle"></i> Daily Extended Clinic Hours</li>
           </ul>
-          <div class="appointment__contact-cards">
-            <a href="tel:+919876543210" class="contact-quick-card">
-              <i class="fas fa-phone"></i>
-              <div>
-                <strong>Call Us</strong>
-                <span>+91 98765 43210</span>
-              </div>
-            </a>
-            <a href="https://wa.me/919876543210" class="contact-quick-card whatsapp-card" target="_blank" rel="noopener">
-              <i class="fab fa-whatsapp"></i>
-              <div>
-                <strong>WhatsApp</strong>
-                <span>Chat Now</span>
-              </div>
-            </a>
-          </div>
         </div>
         <div class="appointment__form-wrap">
           <form class="appointment__form" id="appointment-form" novalidate>
-            <h3>Request an Appointment</h3>
+            <h3>Request Consultation</h3>
             <div class="form-group">
               <label for="appt-name">Full Name *</label>
               <input type="text" id="appt-name" name="name" placeholder="Your full name" required />
@@ -631,26 +627,21 @@
             <div class="form-row">
               <div class="form-group">
                 <label for="appt-phone">Phone Number *</label>
-                <input type="tel" id="appt-phone" name="phone" placeholder="+91 98765 43210" required />
+                <input type="tel" id="appt-phone" name="phone" placeholder="Enter contact number" required />
               </div>
               <div class="form-group">
-                <label for="appt-age">Age</label>
-                <input type="number" id="appt-age" name="age" placeholder="Your age" min="1" max="120" />
+                <label for="appt-service">Treatment</label>
+                <select id="appt-service" name="service">
+                  <option value="">Select Treatment</option>
+                  <option value="implants">Implants / General Surgery</option>
+                  <option value="smile">Smile Design / Aesthetic</option>
+                  <option value="rct">Root Canal Treatment</option>
+                  <option value="crowns">Crowns / Bridges</option>
+                  <option value="ortho">Braces / Orthodontics</option>
+                  <option value="cleaning">Scaling / Polishing</option>
+                  <option value="other">General Checkup / Other</option>
+                </select>
               </div>
-            </div>
-            <div class="form-group">
-              <label for="appt-service">Service Interested In</label>
-              <select id="appt-service" name="service">
-                <option value="">Select a service</option>
-                <option value="whitening">Teeth Whitening</option>
-                <option value="implants">Dental Implants</option>
-                <option value="braces">Braces / Aligners</option>
-                <option value="rootcanal">Root Canal</option>
-                <option value="veneers">Veneers</option>
-                <option value="cleaning">Scaling & Cleaning</option>
-                <option value="checkup">General Checkup</option>
-                <option value="other">Other</option>
-              </select>
             </div>
             <div class="form-row">
               <div class="form-group">
@@ -660,59 +651,16 @@
               <div class="form-group">
                 <label for="appt-time">Preferred Time</label>
                 <select id="appt-time" name="time">
-                  <option value="">Select time</option>
-                  <option>09:00 AM – 10:00 AM</option>
-                  <option>10:00 AM – 11:00 AM</option>
-                  <option>11:00 AM – 12:00 PM</option>
-                  <option>12:00 PM – 01:00 PM</option>
-                  <option>02:00 PM – 03:00 PM</option>
-                  <option>03:00 PM – 04:00 PM</option>
-                  <option>04:00 PM – 05:00 PM</option>
-                  <option>06:00 PM – 07:00 PM</option>
+                  <option value="">Select Timing Batch</option>
+                  <option>Morning (10:00 AM – 02:00 PM)</option>
+                  <option>Evening (05:00 PM – 09:00 PM)</option>
                 </select>
               </div>
             </div>
-            <div class="form-group">
-              <label for="appt-msg">Describe Your Concern (Optional)</label>
-              <textarea id="appt-msg" name="message" rows="3" placeholder="Any tooth pain, concern, or questions..."></textarea>
-            </div>
             <button type="submit" class="btn btn--primary btn--full btn--lg" id="appt-submit">
-              <i class="fas fa-calendar-check"></i> Confirm My Appointment
+              <i class="fas fa-calendar-check"></i> Consult Dr. Anmol Billore
             </button>
-            <p class="form-note"><i class="fas fa-lock"></i> Your information is 100% private and secure.</p>
           </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== GALLERY STRIP ===== -->
-    <section class="gallery section" id="gallery">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Our Clinic</span>
-          <h2 class="section-title">A Clinic You'll <span class="highlight">Love Visiting</span></h2>
-        </div>
-        <div class="gallery__grid">
-          <div class="gallery-item tall">
-            <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&q=80" alt="Modern dental chair" loading="lazy"/>
-            <div class="gallery-item__overlay">Modern Equipment</div>
-          </div>
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1588776814546-1ffbb061e26d?w=600&q=80" alt="Dental consultation" loading="lazy"/>
-            <div class="gallery-item__overlay">Friendly Consultation</div>
-          </div>
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=600&q=80" alt="Dental treatment" loading="lazy"/>
-            <div class="gallery-item__overlay">Advanced Treatment</div>
-          </div>
-          <div class="gallery-item wide">
-            <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80" alt="Clinic waiting room" loading="lazy"/>
-            <div class="gallery-item__overlay">Comfortable Waiting Area</div>
-          </div>
-          <div class="gallery-item">
-            <img src="https://images.unsplash.com/photo-1571772996211-2f02c9727629?w=600&q=80" alt="Clinic reception" loading="lazy"/>
-            <div class="gallery-item__overlay">Welcoming Reception</div>
-          </div>
         </div>
       </div>
     </section>
@@ -722,56 +670,56 @@
       <div class="container faq__inner">
         <div class="faq__header">
           <span class="section-tag">FAQ</span>
-          <h2 class="section-title">Common <span class="highlight">Questions</span></h2>
-          <p>Can't find your answer? <a href="#appointment">Ask us directly.</a></p>
+          <h2 class="section-title">Frequently Asked <span class="highlight">Questions</span></h2>
+          <p>Learn more about Dr. Anmol Billore and Infinity Dental Clinic.</p>
         </div>
         <div class="faq__list">
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">
-              Is the first consultation really free? <i class="fas fa-chevron-down"></i>
+              Where does Dr. Anmol Billore practice? <i class="fas fa-chevron-down"></i>
             </button>
             <div class="faq-a">
-              <p>Yes! Your first consultation including a preliminary examination is completely free. No hidden charges. This includes a quick X-ray assessment if needed.</p>
+              <p>Dr. Anmol Billore practices at Infinity Dental Clinic, Vijay Nagar, Indore. (34, Scheme Number 54, Landmark: Agrawal Path Lab)</p>
             </div>
           </div>
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">
-              Are dental implants painful? <i class="fas fa-chevron-down"></i>
+              Why do patients visit Dr. Anmol Billore? <i class="fas fa-chevron-down"></i>
             </button>
             <div class="faq-a">
-              <p>Implant surgery is done under local anesthesia, so you feel no pain during the procedure. Mild soreness after is normal and goes away in 2–3 days. Most patients say it's far more comfortable than they expected.</p>
+              <p>Patients commonly visit for treatments like Crowns and Bridges Fixing, Artificial Teeth, Smile Design, Dental Implants, and Root Canal Treatment due to his premium approach.</p>
             </div>
           </div>
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">
-              Do you offer EMI or payment plans? <i class="fas fa-chevron-down"></i>
+              What are Dr. Anmol Billore’s qualifications? <i class="fas fa-chevron-down"></i>
             </button>
             <div class="faq-a">
-              <p>Yes! We offer 0% interest EMI through major banks and accept all leading insurance plans. Our team will help you find the best payment option for your treatment.</p>
+              <p>Dr. Anmol Billore holds a BDS degree from Modern Dental College & Research Centre, Indore (Batch of 2010).</p>
             </div>
           </div>
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">
-              How long does teeth whitening last? <i class="fas fa-chevron-down"></i>
+              What are his areas of specialization? <i class="fas fa-chevron-down"></i>
             </button>
             <div class="faq-a">
-              <p>Professional teeth whitening results typically last 1–3 years depending on your diet and oral habits. We also provide maintenance kits to extend the results.</p>
+              <p>He specializes in Dentistry, Cosmetic/Aesthetic Dentistry, Dental Surgery, and Implantology.</p>
             </div>
           </div>
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">
-              Do you treat children? What age is suitable? <i class="fas fa-chevron-down"></i>
+              How many years of experience does he have? <i class="fas fa-chevron-down"></i>
             </button>
             <div class="faq-a">
-              <p>Yes, we see patients of all ages from infants to seniors. We have a specialized pediatric dentist and a fun, child-friendly environment to make kids feel comfortable.</p>
+              <p>Dr. Anmol Billore has 16 years of overall experience, including securely established 15 years as a dedicated specialist.</p>
             </div>
           </div>
           <div class="faq-item">
             <button class="faq-q" aria-expanded="false">
-              What are your clinic timings? <i class="fas fa-chevron-down"></i>
+              What are the clinic timings? <i class="fas fa-chevron-down"></i>
             </button>
             <div class="faq-a">
-              <p>We are open Monday–Saturday 9:00 AM to 8:00 PM and Sundays 10:00 AM to 4:00 PM. Emergency dental care is available 24/7 by phone.</p>
+              <p>The clinic functions Monday – Sunday across two distinct batches: Morning (10:00 AM – 02:00 PM) and Evening (05:00 PM – 09:00 PM).</p>
             </div>
           </div>
         </div>
@@ -783,8 +731,8 @@
       <div class="container">
         <div class="section-header">
           <span class="section-tag">Find Us</span>
-          <h2 class="section-title">Visit <span class="highlight">Our Clinic</span></h2>
-          <p class="section-desc">Centrally located & easily accessible by metro, bus, or car.</p>
+          <h2 class="section-title">Infinity <span class="highlight">Dental Clinic</span></h2>
+          <p class="section-desc">Locate our premium clinic in Vijay Nagar, Indore.</p>
         </div>
         <div class="contact__inner">
           <div class="contact__cards">
@@ -792,50 +740,35 @@
               <i class="fas fa-map-marker-alt"></i>
               <div>
                 <strong>Address</strong>
-                <span>123, Smile Street, Near City Hospital,<br/>Connaught Place, New Delhi – 110001</span>
-              </div>
-            </div>
-            <div class="contact-card">
-              <i class="fas fa-phone"></i>
-              <div>
-                <strong>Phone</strong>
-                <span><a href="tel:+919876543210">+91 98765 43210</a></span>
-                <span><a href="tel:+911123456789">+91 11 2345 6789</a></span>
-              </div>
-            </div>
-            <div class="contact-card">
-              <i class="fas fa-envelope"></i>
-              <div>
-                <strong>Email</strong>
-                <span><a href="mailto:hello@smiledental.in">hello@smiledental.in</a></span>
+                <span>34, Scheme Number 54,<br/>Vijay Nagar, Indore<br/>Landmark: Agrawal Path Lab</span>
               </div>
             </div>
             <div class="contact-card">
               <i class="fas fa-clock"></i>
               <div>
-                <strong>Working Hours</strong>
-                <span>Mon–Sat: 9 AM – 8 PM</span>
-                <span>Sunday: 10 AM – 4 PM</span>
+                <strong>Clinic Timings (Mon – Sun)</strong>
+                <span>Morning: 10:00 AM – 02:00 PM</span>
+                <span>Evening: 05:00 PM – 09:00 PM</span>
               </div>
             </div>
             <div class="contact__social">
-              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-              <a href="https://wa.me/919876543210" aria-label="WhatsApp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i></a>
+              <a href="https://wa.me/message/YOUR_WHATSAPP_LINK" aria-label="WhatsApp" target="_blank" rel="noopener" class="contact-whatsapp-btn">
+                <i class="fab fa-whatsapp"></i>
+                <span>Chat on WhatsApp</span>
+              </a>
             </div>
           </div>
-          <!-- Google Map embed -->
+          <!-- Google Map embed placeholder -->
           <div class="contact__map">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.7441624637076!2d77.2167!3d28.6315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd37b741d057%3A0xcdee88e47393c3f1!2sConnaught%20Place%2C%20New%20Delhi!5e0!3m2!1sen!2sin!4v1700000000000"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.336423406322!2d75.8911!3d22.7533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396302a4505fbae5%3A0xe5323a23a31c51db!2sVijay%20Nagar%2C%20Indore%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000"
               width="100%"
               height="400"
               style="border:0;"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
-              title="SmileCare Dental Clinic Location"
+              title="Infinity Dental Clinic Location"
               aria-label="Google map showing clinic location">
             </iframe>
           </div>
@@ -852,34 +785,31 @@
         <div class="nav__logo">
           <div class="logo-icon"><i class="fas fa-tooth"></i></div>
           <div class="logo-text">
-            <span class="logo-primary">SmileCare</span>
+            <span class="logo-primary">Infinity</span>
             <span class="logo-sub">Dental Clinic</span>
           </div>
         </div>
-        <p>Your trusted dental partner for over 15 years. Advanced care, gentle hands, and smiles that last a lifetime.</p>
+        <p>Your trusted premium dental partner in Indore. Advanced care, highly experienced surgeon, and reliable, pain-free treatments guided by Dr. Anmol Billore.</p>
         <div class="footer__social">
-          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-          <a href="https://wa.me/919876543210" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <a href="https://wa.me/message/YOUR_WHATSAPP_LINK" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
         </div>
       </div>
       <div class="footer__links">
-        <h4>Services</h4>
+        <h4>Core Services</h4>
         <ul>
-          <li><a href="#services">Teeth Whitening</a></li>
-          <li><a href="#services">Dental Implants</a></li>
-          <li><a href="#services">Braces & Aligners</a></li>
-          <li><a href="#services">Root Canal</a></li>
-          <li><a href="#services">Veneers</a></li>
-          <li><a href="#services">Scaling & Cleaning</a></li>
+          <li><a href="#services">Dental Implants & Grafting</a></li>
+          <li><a href="#services">Smile Design & Aesthetics</a></li>
+          <li><a href="#services">Zirconia Crowns & Bridges</a></li>
+          <li><a href="#services">Root Canal (Single Sitting)</a></li>
+          <li><a href="#services">Presurgical Orthodontics</a></li>
+          <li><a href="#services">Surgical Extractions</a></li>
         </ul>
       </div>
       <div class="footer__links">
         <h4>Quick Links</h4>
         <ul>
           <li><a href="#hero">Home</a></li>
-          <li><a href="#doctors">Our Doctors</a></li>
+          <li><a href="#doctors">Dr. Anmol Billore</a></li>
           <li><a href="#why-us">Why Choose Us</a></li>
           <li><a href="#testimonials">Reviews</a></li>
           <li><a href="#faq">FAQ</a></li>
@@ -888,19 +818,17 @@
       </div>
       <div class="footer__contact">
         <h4>Contact</h4>
-        <p><i class="fas fa-map-marker-alt"></i> 123, Smile Street, Connaught Place, New Delhi – 110001</p>
-        <p><i class="fas fa-phone"></i> <a href="tel:+919876543210">+91 98765 43210</a></p>
-        <p><i class="fas fa-envelope"></i> <a href="mailto:hello@smiledental.in">hello@smiledental.in</a></p>
+        <p><i class="fas fa-map-marker-alt" style="margin-top:0.3rem;"></i> 34, Scheme Number 54, Vijay Nagar, Indore (near Agrawal Path Lab)</p>
+        <p><i class="fas fa-clock" style="margin-top:0.3rem;"></i> 10AM–2PM & 5PM–9PM (Mon-Sun)</p>
         <a href="#appointment" class="btn btn--primary btn--sm" style="margin-top: 1rem; display:inline-flex;">Book Appointment</a>
       </div>
     </div>
     <div class="footer__bottom">
       <div class="container">
-        <p>© 2024 SmileCare Dental Clinic. All rights reserved.</p>
+        <p>© 2024 Infinity Dental Clinic. Dr. Anmol Billore. All rights reserved.</p>
         <div class="footer__bottom-links">
           <a href="#">Privacy Policy</a>
           <a href="#">Terms of Service</a>
-          <a href="#">Sitemap</a>
         </div>
       </div>
     </div>
@@ -911,8 +839,8 @@
     <div class="modal__inner">
       <div class="modal__icon"><i class="fas fa-check-circle"></i></div>
       <h3>Appointment Requested!</h3>
-      <p>Thank you! Our team will call you within 2 hours to confirm your appointment. You'll also receive a WhatsApp confirmation.</p>
-      <button class="btn btn--primary" id="modal-close">Done</button>
+      <p>Thank you! Our facility will coordinate to allocate your timing batch and ensure your smooth premium visit strictly managed by Dr. Anmol Billore.</p>
+      <button class="btn btn--primary" id="modal-close">Close</button>
     </div>
   </div>
   <div class="modal-overlay" id="modal-overlay"></div>
@@ -922,6 +850,7 @@
     <i class="fas fa-arrow-up"></i>
   </button>
 
-  <script src="script.js"></script>
+  <!-- Defer execution of scripts to improve mobile load times -->
+  <script defer src="script.js"></script>
 </body>
 </html>

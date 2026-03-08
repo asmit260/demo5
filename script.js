@@ -256,7 +256,6 @@
   const heroImg = document.getElementById('hero-img');
   if (heroImg) {
     heroImg.onerror = function () {
-      // Replace with a styled placeholder
       const wrap = heroImg.parentElement;
       heroImg.remove();
       wrap.insertAdjacentHTML('afterbegin', `
@@ -271,7 +270,7 @@
           position:relative;
         ">
           <i class="fas fa-user-md" style="margin-bottom:0.5rem;"></i>
-          <span style="font-size:1rem;font-weight:700;opacity:0.85;">SmileCare Doctors</span>
+          <span style="font-size:1rem;font-weight:700;opacity:0.85;">Dr. Anmol Billore</span>
         </div>
       `);
     };
@@ -298,5 +297,20 @@
       window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
     });
   });
+
+  /* ── 11. VIEW ALL SERVICES (mobile expand) ── */
+  const viewAllBtn = document.getElementById('view-all-services-btn');
+  if (viewAllBtn) {
+    let expanded = false;
+    viewAllBtn.addEventListener('click', () => {
+      expanded = !expanded;
+      document.querySelectorAll('.svc-extra').forEach(card => {
+        card.classList.toggle('show', expanded);
+      });
+      viewAllBtn.innerHTML = expanded
+        ? '<i class="fas fa-chevron-up"></i> Show Less'
+        : '<i class="fas fa-th"></i> View All Services';
+    });
+  }
 
 })();
