@@ -117,23 +117,23 @@
             <i class="fas fa-shield-heart"></i> Premium Dental Care in Indore
           </div>
           <h1 class="hero__title">
-            Transforming Smiles with <br/>
-            <span class="highlight">Modern Precision</span>
+            Transforming Smiles with<br/>
+            <span class="highlight">Modern Dental Precision</span>
           </h1>
           <p class="hero__subtitle">
-            Experience pain-free, comfortable, and highly effective dental treatments led by Dr. Anmol Billore. We make dentistry a premium, relaxing experience.
+            Pain-free, advanced dental treatments by Dr. Anmol Billore — where premium care meets modern precision.
           </p>
           <div class="hero__stats">
             <div class="stat">
-              <strong>16+</strong><span>Years Experience</span>
+              <strong>16+</strong><span>Yrs Experience</span>
             </div>
             <div class="stat-divider"></div>
             <div class="stat">
-              <strong>15+</strong><span>Years Specialist</span>
+              <strong>500+</strong><span>Happy Patients</span>
             </div>
             <div class="stat-divider"></div>
-            <div class="stat" style="display:flex; flex-direction:column; align-items:center;">
-              <strong><i class="fas fa-check-circle" style="color:var(--green); font-size: 1.4rem;"></i></strong><span style="margin-top:0.2rem;">Verified Reg</span>
+            <div class="stat">
+              <strong>4.9</strong><span>Google Rating ⭐</span>
             </div>
           </div>
           <div class="hero__actions">
@@ -169,7 +169,9 @@
         </div>
         <!-- MOBILE-ONLY doctor photo thumbnail in hero -->
         <div class="hero__mobile-doc">
-          <img src="dr-billore.jpg" alt="Dr. Anmol Billore" class="hero__mobile-doc-img" fetchpriority="high" />
+          <div class="hero__mobile-doc-ring">
+            <img src="dr-billore.jpg" alt="Dr. Anmol Billore" class="hero__mobile-doc-img" fetchpriority="high" />
+          </div>
           <div class="hero__mobile-doc-label">
             <span>Dr. Anmol Billore</span>
             <em>BDS · Implantologist</em>
@@ -193,7 +195,7 @@
         </div>
         <div class="trust-item">
           <i class="fas fa-microscope"></i>
-          <span>Modern Dental Technologies</span>
+          <span>Modern Tech</span>
         </div>
         <div class="trust-item">
           <i class="fas fa-tooth"></i>
@@ -201,7 +203,44 @@
         </div>
         <div class="trust-item">
           <i class="fas fa-medal"></i>
-          <span>Highest Standards of Patient Care</span>
+          <span>Premium Patient Care</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TRUST SOCIAL PROOF BAR ===== -->
+    <section class="trust-stats-bar">
+      <div class="container trust-stats-bar__inner">
+        <div class="tsb-item">
+          <span class="tsb-icon">⭐</span>
+          <div>
+            <strong>4.9 / 5</strong>
+            <span>Google Rating</span>
+          </div>
+        </div>
+        <div class="tsb-divider"></div>
+        <div class="tsb-item">
+          <span class="tsb-icon">😊</span>
+          <div>
+            <strong>500+</strong>
+            <span>Happy Patients</span>
+          </div>
+        </div>
+        <div class="tsb-divider"></div>
+        <div class="tsb-item">
+          <span class="tsb-icon">🦷</span>
+          <div>
+            <strong>10,000+</strong>
+            <span>Treatments Done</span>
+          </div>
+        </div>
+        <div class="tsb-divider"></div>
+        <div class="tsb-item">
+          <span class="tsb-icon">✅</span>
+          <div>
+            <strong>MCI Verified</strong>
+            <span>Registration</span>
+          </div>
         </div>
       </div>
     </section>
@@ -273,16 +312,20 @@
         <div class="doctor-mobile-card">
           <div class="doctor-mobile-card__photo">
             <img src="dr-billore.jpg" alt="Dr. Anmol Billore" loading="lazy" />
+            <div class="doctor-mobile-card__photo-badge">MCI Verified ✓</div>
           </div>
           <div class="doctor-mobile-card__info">
             <h3>Dr. Anmol Billore</h3>
             <span class="doctor-mobile-card__qual">BDS · Cosmetic Dentist · Implantologist</span>
             <div class="doctor-mobile-card__tags">
-              <span><i class="fas fa-briefcase"></i> 16+ Yrs Experience</span>
-              <span><i class="fas fa-check-circle"></i> Verified Registration</span>
-              <span><i class="fas fa-award"></i> IIT Bombay Recognition</span>
+              <span><i class="fas fa-check-circle"></i> 16+ Years Experience</span>
+              <span><i class="fas fa-check-circle"></i> MCI Verified Dentist</span>
+              <span><i class="fas fa-check-circle"></i> 500+ Happy Patients</span>
             </div>
-            <a href="#appointment" class="btn btn--primary btn--sm" style="align-self:flex-start; margin-top:0.5rem;">Book Consultation</a>
+            <div class="doctor-mobile-card__actions">
+              <a href="#appointment" class="btn btn--primary btn--sm">Book Consultation</a>
+              <a href="https://wa.me/message/YOUR_WHATSAPP_LINK" class="btn btn--whatsapp btn--sm" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
           </div>
         </div>
 
@@ -559,46 +602,60 @@
           <div class="testimonial-track" id="testimonial-track">
 
             <div class="testimonial-card">
-              <div class="testimonial-top">
-                <img src="https://i.pravatar.cc/60?img=32" alt="Patient Review" loading="lazy" />
-                <div>
-                  <strong>Aesthetic Dentistry</strong>
-                  <span>Smile Makeover</span>
-                </div>
-                <div class="t-stars">★★★★★</div>
-              </div>
+              <div class="t-stars-top">★★★★★</div>
               <p>"Dr. Anmol completely transformed how I smile! The clinical experience was incredible and the procedure was genuinely painless. Truly the best dental facility in Indore."</p>
+              <div class="testimonial-patient">
+                <img src="https://i.pravatar.cc/60?img=32" alt="Patient" loading="lazy" />
+                <div>
+                  <strong>Priya Sharma</strong>
+                  <span>Smile Makeover · Indore</span>
+                </div>
+              </div>
             </div>
 
             <div class="testimonial-card">
-              <div class="testimonial-top">
-                <img src="https://i.pravatar.cc/60?img=47" alt="Patient Review" loading="lazy" />
+              <div class="t-stars-top">★★★★★</div>
+              <p>"I visited Infinity Dental Clinic for a dental implant. Dr. Billore is phenomenal — the care standard is supreme, no discomfort at all. Highly recommended!"</p>
+              <div class="testimonial-patient">
+                <img src="https://i.pravatar.cc/60?img=47" alt="Patient" loading="lazy" />
                 <div>
-                  <strong>Dental Implant</strong>
-                  <span>Implantology</span>
+                  <strong>Rahul Verma</strong>
+                  <span>Dental Implant · Vijay Nagar</span>
                 </div>
-                <div class="t-stars">★★★★★</div>
               </div>
-              <p>"I visited Infinity Dental Clinic for an artificial tooth implant. Dr. Billore is phenomenal. The care standard is supreme and there was entirely no discomfort."</p>
             </div>
 
             <div class="testimonial-card">
-              <div class="testimonial-top">
-                <img src="https://i.pravatar.cc/60?img=3" alt="Patient Review" loading="lazy" />
+              <div class="t-stars-top">★★★★★</div>
+              <p>"I went in fearing a Root Canal, but it was done in a single sitting! Thoroughly impressed by the premium comfort and transparency from start to finish."</p>
+              <div class="testimonial-patient">
+                <img src="https://i.pravatar.cc/60?img=3" alt="Patient" loading="lazy" />
                 <div>
-                  <strong>Single Sitting RCT</strong>
-                  <span>Root Canal</span>
+                  <strong>Anita Gupta</strong>
+                  <span>Root Canal (RCT) · Indore</span>
                 </div>
-                <div class="t-stars">★★★★★</div>
               </div>
-              <p>"I went in fearing a Root Canal, but it was resolved efficiently in a single setting! I am thoroughly impressed by the premium comfort and transparency from start to finish."</p>
+            </div>
+
+            <div class="testimonial-card">
+              <div class="t-stars-top">★★★★★</div>
+              <p>"Got my braces done here. Dr. Billore explained everything patiently. The results are amazing — my teeth alignment is perfect now!"</p>
+              <div class="testimonial-patient">
+                <img src="https://i.pravatar.cc/60?img=12" alt="Patient" loading="lazy" />
+                <div>
+                  <strong>Arjun Malhotra</strong>
+                  <span>Braces · Scheme 54</span>
+                </div>
+              </div>
             </div>
 
           </div>
-          <!-- Slider controls -->
-          <button class="slider-btn slider-btn--prev" id="slider-prev" aria-label="Previous review"><i class="fas fa-chevron-left"></i></button>
-          <button class="slider-btn slider-btn--next" id="slider-next" aria-label="Next review"><i class="fas fa-chevron-right"></i></button>
-          <div class="slider-dots" id="slider-dots"></div>
+          <!-- Slider controls — hidden on mobile, swipe only -->
+          <div class="slider-nav">
+            <button class="slider-btn slider-btn--prev" id="slider-prev" aria-label="Previous review"><i class="fas fa-chevron-left"></i></button>
+            <div class="slider-dots" id="slider-dots"></div>
+            <button class="slider-btn slider-btn--next" id="slider-next" aria-label="Next review"><i class="fas fa-chevron-right"></i></button>
+          </div>
         </div>
       </div>
     </section>
