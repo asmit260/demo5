@@ -491,17 +491,10 @@ const PAGE = document.body.dataset.page || 'home';
       if (resp.ok) {
         knownSlugs = await resp.json();
       } else {
-        // Fallback hardcoded if the JSON missing
-        knownSlugs = [
-          '5-signs-you-need-dental-implant',
-          'smile-makeover-vs-teeth-whitening'
-        ];
+        console.warn('blog-list.json not found, falling back to empty list.');
       }
-    } catch {
-      knownSlugs = [
-        '5-signs-you-need-dental-implant',
-        'smile-makeover-vs-teeth-whitening'
-      ];
+    } catch (err) {
+      console.warn('Error fetching blog-list.json:', err);
     }
 
     const results = await Promise.all(
