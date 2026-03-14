@@ -1,0 +1,25 @@
+{
+  "cases": [
+    {
+      "title": "Complete Smile Makeover",
+      "category": "Smile Makeover",
+      "description": "Patient had chipped, discolored, and misaligned teeth. After a complete smile design with veneers and whitening, the transformation is remarkable.",
+      "before_img": "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=600&q=80",
+      "after_img": "https://images.unsplash.com/photo-1593007791459-4b05e1158229?w=600&q=80"
+    },
+    {
+      "title": "Dental Implant – Single Tooth",
+      "category": "Dental Implants",
+      "description": "Missing front tooth replaced with a titanium implant and zirconia crown — virtually indistinguishable from natural teeth. Full function restored.",
+      "before_img": "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=600&q=80",
+      "after_img": "https://images.unsplash.com/photo-1559599101-f09722fb4948?w=600&q=80"
+    },
+    {
+      "title": "Braces & Alignment Correction",
+      "category": "Braces & Ortho",
+      "description": "Severe crowding and misalignment corrected over 18 months with precision braces. Perfect bite and confident smile achieved.",
+      "before_img": "https://images.unsplash.com/photo-1588776814546-1ffbb172c6b4?w=600&q=80",
+      "after_img": "https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=600&q=80"
+    }
+  ]
+}

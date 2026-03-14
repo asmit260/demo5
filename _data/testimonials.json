@@ -1,0 +1,36 @@
+{
+  "reviews": [
+    {
+      "name": "Priya Sharma",
+      "location": "Indore",
+      "treatment": "Smile Makeover",
+      "text": "Dr. Anmol completely transformed how I smile! The clinical experience was incredible and the procedure was genuinely painless. Truly the best dental facility in Indore.",
+      "stars": 5,
+      "avatar": "https://i.pravatar.cc/60?img=32"
+    },
+    {
+      "name": "Rahul Verma",
+      "location": "Vijay Nagar",
+      "treatment": "Dental Implant",
+      "text": "I visited Infinity Dental Clinic for a dental implant. Dr. Billore is phenomenal — the care standard is supreme, no discomfort at all. Highly recommended!",
+      "stars": 5,
+      "avatar": "https://i.pravatar.cc/60?img=47"
+    },
+    {
+      "name": "Anita Gupta",
+      "location": "Indore",
+      "treatment": "Root Canal (RCT)",
+      "text": "I went in fearing a Root Canal, but it was done in a single sitting! Thoroughly impressed by the premium comfort and transparency from start to finish.",
+      "stars": 5,
+      "avatar": "https://i.pravatar.cc/60?img=3"
+    },
+    {
+      "name": "Arjun Malhotra",
+      "location": "Scheme 54",
+      "treatment": "Braces",
+      "text": "Got my braces done here. Dr. Billore explained everything patiently. The results are amazing — my teeth alignment is perfect now!",
+      "stars": 5,
+      "avatar": "https://i.pravatar.cc/60?img=12"
+    }
+  ]
+}

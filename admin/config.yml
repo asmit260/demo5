@@ -1,0 +1,106 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Allow editors to preview content before publishing
+publish_mode: editorial_workflow
+
+# Uploaded images stored in /uploads directory
+media_folder: "uploads"
+public_folder: "/uploads"
+
+# ── COLLECTIONS ────────────────────────────────────────────────────────────
+collections:
+
+  # ── 1. SITE SETTINGS (single file) ──────────────────────────────────────
+  - name: "settings"
+    label: "⚙️ Site Settings"
+    files:
+      - name: "general"
+        label: "Clinic Info & Settings"
+        file: "_data/settings.json"
+        format: json
+        fields:
+          - { label: "Clinic Name", name: "clinic_name", widget: "string", default: "Infinity Dental Clinic" }
+          - { label: "Doctor Name", name: "doctor_name", widget: "string", default: "Dr. Anmol Billore" }
+          - { label: "Doctor Qualification", name: "doctor_qual", widget: "string", default: "BDS | Dental & Cosmetic Surgeon | Implantologist" }
+          - { label: "Doctor Quote", name: "doctor_quote", widget: "text" }
+          - { label: "WhatsApp Link", name: "whatsapp_link", widget: "string", hint: "Full wa.me link e.g. https://wa.me/919876543210" }
+          - { label: "Phone Number (display)", name: "phone_display", widget: "string", default: "+91 98765 43210" }
+          - { label: "Address", name: "address", widget: "text" }
+          - { label: "Google Maps Embed URL", name: "maps_embed", widget: "string" }
+          - label: "Hero Stats"
+            name: "stats"
+            widget: "object"
+            fields:
+              - { label: "Years Experience", name: "years_exp", widget: "string", default: "16+" }
+              - { label: "Happy Patients", name: "happy_patients", widget: "string", default: "500+" }
+              - { label: "Google Rating", name: "rating", widget: "string", default: "4.9" }
+              - { label: "Treatments Done", name: "treatments_done", widget: "string", default: "10,000+" }
+          - label: "Clinic Timings"
+            name: "timings"
+            widget: "object"
+            fields:
+              - { label: "Morning Hours", name: "morning", widget: "string", default: "10:00 AM – 02:00 PM" }
+              - { label: "Evening Hours", name: "evening", widget: "string", default: "05:00 PM – 09:00 PM" }
+              - { label: "Days Open", name: "days", widget: "string", default: "Monday – Sunday" }
+
+  # ── 2. PATIENT REVIEWS (file-based list) ────────────────────────────────
+  - name: "testimonials"
+    label: "⭐ Patient Reviews"
+    files:
+      - name: "reviews"
+        label: "All Reviews"
+        file: "_data/testimonials.json"
+        format: json
+        fields:
+          - label: "Reviews"
+            name: "reviews"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.treatment}}"
+            fields:
+              - { label: "Patient Name", name: "name", widget: "string" }
+              - { label: "Location", name: "location", widget: "string" }
+              - { label: "Treatment", name: "treatment", widget: "string" }
+              - { label: "Review Text", name: "text", widget: "text" }
+              - { label: "Stars (1-5)", name: "stars", widget: "number", default: 5, min: 1, max: 5 }
+              - { label: "Avatar Image URL (optional)", name: "avatar", widget: "string", required: false, hint: "Leave blank for generated avatar" }
+
+  # ── 3. BEFORE & AFTER GALLERY ───────────────────────────────────────────
+  - name: "before_after"
+    label: "🦷 Before & After Gallery"
+    files:
+      - name: "gallery"
+        label: "Before & After Cases"
+        file: "_data/before-after.json"
+        format: json
+        fields:
+          - label: "Cases"
+            name: "cases"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "Case Title", name: "title", widget: "string", hint: "e.g. Smile Makeover, Dental Implants" }
+              - { label: "Category", name: "category", widget: "select", options: ["Braces & Ortho", "Dental Implants", "Smile Makeover", "Teeth Whitening", "Crowns & Bridges", "Root Canal"] }
+              - { label: "Description", name: "description", widget: "text", required: false }
+              - { label: "Before Image", name: "before_img", widget: "image" }
+              - { label: "After Image", name: "after_img", widget: "image" }
+
+  # ── 4. BLOG POSTS ────────────────────────────────────────────────────────
+  - name: "blog"
+    label: "📝 Blog Posts"
+    folder: "_data/blog"
+    create: true
+    slug: "{{slug}}"
+    format: frontmatter
+    extension: md
+    summary: "{{title}} — {{date}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string", default: "Dr. Anmol Billore" }
+      - { label: "Category", name: "category", widget: "select", options: ["Dental Tips", "Oral Health", "Cosmetic Dentistry", "Implants", "Patient Stories", "Clinic News"] }
+      - { label: "Thumbnail Image", name: "thumbnail", widget: "image" }
+      - { label: "Excerpt (short summary)", name: "excerpt", widget: "text" }
+      - { label: "Featured Post?", name: "featured", widget: "boolean", default: false }
+      - { label: "Body Content", name: "body", widget: "markdown" }
