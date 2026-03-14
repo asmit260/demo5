@@ -1,14 +1,27 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Content Manager</title>
-    <!-- Include the script that builds the page and powers Decap CMS -->
-    <script src="https://unpkg.com/decap-cms@^3.1.2/dist/decap-cms.js"></script>
-  </head>
-  <body>
-    <!-- Include Netlify Identity widget to manage auth -->
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Panel | Infinity Dental Clinic</title>
+  <!-- Netlify Identity MUST load before Decap CMS -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <!-- Decap CMS — pinned to stable 3.3.3 to avoid the appendChild null bug -->
+  <script src="https://unpkg.com/decap-cms@3.3.3/dist/decap-cms.js"></script>
+</head>
+<body>
+  <!-- Decap CMS mounts itself into a div it creates; body must be empty -->
+  <script>
+    // Redirect after login to admin panel (not homepage)
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on('init', function (user) {
+        if (!user) {
+          window.netlifyIdentity.on('login', function () {
+            document.location.href = '/admin/';
+          });
+        }
+      });
+    }
+  </script>
+</body>
 </html>
