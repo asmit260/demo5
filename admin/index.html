@@ -4,15 +4,23 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Admin Panel | Infinity Dental Clinic</title>
-  <!-- Netlify Identity MUST load before Decap CMS -->
+  <!--
+    IMPORTANT ORDER:
+    1. Netlify Identity widget MUST be in <head>
+    2. Decap CMS script MUST be at end of <body>
+    Reversing this causes the "appendChild of null" blank-screen bug.
+  -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  <!-- Decap CMS — pinned to stable 3.3.3 to avoid the appendChild null bug -->
-  <script src="https://unpkg.com/decap-cms@3.3.3/dist/decap-cms.js"></script>
 </head>
 <body>
-  <!-- Decap CMS mounts itself into a div it creates; body must be empty -->
+  <!--
+    Decap CMS mounts itself into the body at runtime.
+    Place the script HERE (end of body) — NOT in <head>.
+    Using cdn.jsdelivr.net which is more reliable than unpkg for large bundles.
+  -->
+  <script src="https://cdn.jsdelivr.net/npm/decap-cms@3.1.2/dist/decap-cms.js"></script>
   <script>
-    // Redirect after login to admin panel (not homepage)
+    // After login via Netlify Identity, redirect to admin panel (not homepage)
     if (window.netlifyIdentity) {
       window.netlifyIdentity.on('init', function (user) {
         if (!user) {
