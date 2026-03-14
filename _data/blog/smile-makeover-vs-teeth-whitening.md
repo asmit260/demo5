@@ -3,7 +3,7 @@ title: "Smile Makeover vs. Teeth Whitening: What's Right for You?"
 date: 2026-03-05T09:00:00.000Z
 author: Dr. Anmol Billore
 category: Cosmetic Dentistry
-thumbnail: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=800&q=80"
+thumbnail: "https://images.unsplash.com/photo-1629909614648-993f85a7a8e9?w=800&q=80"
 excerpt: "Teeth whitening is popular, but it only addresses colour. A Smile Makeover is a comprehensive transformation. Here's a quick guide to choosing between the two based on your goals and budget."
 featured: false
 ---

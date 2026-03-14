@@ -45,16 +45,8 @@ const PAGE = document.body.dataset.page || 'home';
   }, { passive: true });
   backToTop?.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-  /* ── 3. ACTIVE NAV LINK (scroll-spy) ───────── */
-  // Scroll-spy for active nav — only on home page
-  if (PAGE === 'home') {
-    const navLinks = document.querySelectorAll('.nav__link');
-    const sections  = document.querySelectorAll('section[id]');
-    function updateActiveLink() {
-      // Home page has page-based nav links pointing to other HTML files,
-      // so we skip anchor-based highlighting here.
-    }
-  }
+  /* ── 3. ACTIVE NAV LINK ──────────────────────── */
+  // Nav links point to separate HTML pages — no scroll-spy needed.
 
   /* ── 4. COUNTER ANIMATION ──────────────────── */
   function animateCounter(el) {
@@ -142,7 +134,7 @@ const PAGE = document.body.dataset.page || 'home';
     dateInput.min = today;
   }
   form?.addEventListener('submit', (e) => {
-    e.preventDefault();
+    // Client-side validation before Netlify Forms submits
     const name  = document.getElementById('appt-name');
     const phone = document.getElementById('appt-phone');
     let valid = true;
@@ -150,16 +142,11 @@ const PAGE = document.body.dataset.page || 'home';
       input.style.borderColor = '';
       if (!input.value.trim()) { input.style.borderColor = '#ef4444'; valid = false; }
     });
-    if (!valid) return;
+    if (!valid) { e.preventDefault(); return; }
+    // Allow native Netlify Forms submission — do not call e.preventDefault()
     const submitBtn = document.getElementById('appt-submit');
     submitBtn.disabled = true;
     submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
-    setTimeout(() => {
-      form.reset();
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = '<i class="fas fa-calendar-check"></i> Confirm My Appointment';
-      openSuccessModal();
-    }, 1400);
   });
   function openSuccessModal() {
     modal?.classList.add('show');
@@ -554,12 +541,13 @@ const PAGE = document.body.dataset.page || 'home';
     // On home page show only 2 preview cards; on blog.html show all
     const previewCount = PAGE === 'home' ? 2 : (showAllBlogs ? allBlogPosts.length : 6);
     const visible = allBlogPosts.slice(0, previewCount);
+    const THUMB_PLACEHOLDER = `data:image/svg+xml,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="600" height="300"><rect width="100%" height="100%" fill="#e0f2fe"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="sans-serif" font-size="48" fill="#0ea5e9">🦷</text></svg>')}`;
     grid.innerHTML = visible.map((post, i) => {
       const isFeatured = post.featured === 'true' || post.featured === true;
       return `
         <div class="blog-card${isFeatured && i === 0 ? ' blog-card--featured' : ''}" data-slug="${post.slug}" onclick="openBlogPost('${post.slug}')">
           <div class="blog-card__thumb-wrap">
-            <img class="blog-card__thumb" src="${post.thumbnail || 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?w=600&q=80'}" alt="${post.title}" loading="lazy" />
+            <img class="blog-card__thumb" src="${post.thumbnail || THUMB_PLACEHOLDER}" alt="${post.title}" loading="lazy" onerror="this.src='${THUMB_PLACEHOLDER}'" />
           </div>
           <div class="blog-card__body">
             <div class="blog-card__meta">

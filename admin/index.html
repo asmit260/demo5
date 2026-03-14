@@ -13,6 +13,31 @@
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
+  <!-- Setup Required Banner — visible before CMS loads; hidden by JS when CMS is ready -->
+  <div id="cms-setup-notice" style="
+    font-family: system-ui, sans-serif;
+    background: #fefce8; border: 1.5px solid #fbbf24;
+    border-radius: 10px; padding: 1.5rem 2rem; margin: 2rem auto;
+    max-width: 640px; color: #92400e; line-height: 1.6;
+  ">
+    <strong style="font-size:1.1rem;">⚙️ Admin Panel Setup Required</strong>
+    <p style="margin-top:0.75rem;">If you see a blank page, Netlify Identity has not been enabled yet. Follow these steps:</p>
+    <ol style="margin:0.5rem 0 0 1.25rem;">
+      <li>Open your <strong>Netlify dashboard</strong> → Site settings → <strong>Identity</strong> → Enable</li>
+      <li>Under Identity → <strong>Services</strong> → Enable <strong>Git Gateway</strong></li>
+      <li>Invite yourself as a user via Identity → <strong>Invite users</strong></li>
+      <li>Reload this page — the CMS login will appear</li>
+    </ol>
+  </div>
+  <script>
+    // Hide the notice once Decap CMS starts rendering
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(function() {
+        var notice = document.getElementById('cms-setup-notice');
+        if (notice) notice.style.display = 'none';
+      }, 3000);
+    });
+  </script>
   <!--
     Decap CMS mounts itself into the body at runtime.
     Place the script HERE (end of body) — NOT in <head>.
