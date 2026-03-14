@@ -485,11 +485,25 @@ const PAGE = document.body.dataset.page || 'home';
     const grid = document.getElementById('blog-grid');
     if (!grid) return;
 
-    // Known blog post slugs — add new ones here when you publish via CMS
-    const knownSlugs = [
-      '5-signs-you-need-dental-implant',
-      'smile-makeover-vs-teeth-whitening'
-    ];
+    let knownSlugs = [];
+    try {
+      const resp = await fetch('/_data/blog-list.json');
+      if (resp.ok) {
+        knownSlugs = await resp.json();
+      } else {
+        // Fallback hardcoded if the JSON missing
+        knownSlugs = [
+          '5-signs-you-need-dental-implant',
+          'smile-makeover-vs-teeth-whitening'
+        ];
+      }
+    } catch {
+      knownSlugs = [
+        '5-signs-you-need-dental-implant',
+        'smile-makeover-vs-teeth-whitening'
+      ];
+    }
+
     const results = await Promise.all(
       knownSlugs.map(s => safeFetch(`/_data/blog/${s}.md`, true).then(md => md ? parseFrontmatter(md, s) : null))
     );
@@ -503,7 +517,11 @@ const PAGE = document.body.dataset.page || 'home';
     // Sort by date descending
     posts.sort((a, b) => new Date(b.date) - new Date(a.date));
     allBlogPosts = posts;
-    renderBlogCards();
+    if (PAGE === 'post') {
+      renderSinglePost();
+    } else {
+      renderBlogCards();
+    }
   }
 
   /**
@@ -545,7 +563,7 @@ const PAGE = document.body.dataset.page || 'home';
     grid.innerHTML = visible.map((post, i) => {
       const isFeatured = post.featured === 'true' || post.featured === true;
       return `
-        <div class="blog-card${isFeatured && i === 0 ? ' blog-card--featured' : ''}" data-slug="${post.slug}" onclick="openBlogPost('${post.slug}')">
+        <a href="post.html?slug=${post.slug}" class="blog-card${isFeatured && i === 0 ? ' blog-card--featured' : ''}" style="text-decoration: none; color: inherit;">
           <div class="blog-card__thumb-wrap">
             <img class="blog-card__thumb" src="${post.thumbnail || THUMB_PLACEHOLDER}" alt="${post.title}" loading="lazy" onerror="this.src='${THUMB_PLACEHOLDER}'" />
           </div>
@@ -558,7 +576,7 @@ const PAGE = document.body.dataset.page || 'home';
             <p class="blog-card__excerpt">${post.excerpt || ''}</p>
             <span class="blog-card__read">Read Article <i class="fas fa-arrow-right"></i></span>
           </div>
-        </div>`;
+        </a>`;
     }).join('');
 
     // On home page: hide the toggle button (page has its own "View All" link)
@@ -576,52 +594,51 @@ const PAGE = document.body.dataset.page || 'home';
     }
   }
 
-  /* Blog post modal */
-  window.openBlogPost = function(slug) {
-    const post = allBlogPosts.find(p => p.slug === slug);
-    if (!post) return;
+  /* Single Post Page Rendering */
+  function renderSinglePost() {
+    if (PAGE !== 'post') return;
+    const urlParams = new URLSearchParams(window.location.search);
+    const slug = urlParams.get('slug');
+    const contentDiv = document.getElementById('post-content');
+    if (!contentDiv) return;
 
-    // Create or reuse modal
-    let modal = document.getElementById('blog-modal');
-    if (!modal) {
-      modal = document.createElement('div');
-      modal.id = 'blog-modal';
-      modal.className = 'blog-modal';
-      document.body.appendChild(modal);
+    const post = allBlogPosts.find(p => p.slug === slug);
+    if (!post) {
+      contentDiv.innerHTML = '<div class="ba-loading" style="padding:2rem;"><i class="fas fa-exclamation-circle" style="color:#ef4444;"></i> Post not found. Please return to the <a href="blog.html" style="color:var(--primary);text-decoration:underline;">blog</a>.</div>';
+      return;
+    }
+
+    // Set Meta Info
+    document.title = `${post.title} | Infinity Dental Clinic`;
+    const titleEl = document.getElementById('post-title');
+    const catEl = document.getElementById('post-category');
+    const dateEl = document.getElementById('post-date');
+    const thumbEl = document.getElementById('post-thumbnail');
+
+    if (titleEl) titleEl.textContent = post.title;
+    if (catEl) catEl.textContent = post.category || 'Dental Tips';
+    if (dateEl) dateEl.textContent = formatDate(post.date);
+    
+    if (thumbEl && post.thumbnail) {
+      thumbEl.src = post.thumbnail;
+      thumbEl.alt = post.title;
+      thumbEl.style.display = 'block';
+    } else if (thumbEl) {
+       thumbEl.style.display = 'none';
     }
 
     const bodyHtml = (typeof marked !== 'undefined' && marked.parse)
       ? marked.parse(post.body || '')
       : `<p>${(post.excerpt || '')}</p>`;
 
-    modal.innerHTML = `
-      <div class="blog-modal__inner" role="dialog" aria-modal="true" aria-label="${post.title}">
-        <button class="blog-modal__close" id="blog-modal-close" aria-label="Close"><i class="fas fa-times"></i></button>
-        <img class="blog-modal__hero" src="${post.thumbnail || ''}" alt="${post.title}" />
-        <div class="blog-modal__content">
-          <div class="blog-modal__meta">
-            <span class="blog-card__cat">${post.category || 'Dental Tips'}</span>
-            <span class="blog-card__date"><i class="fas fa-calendar-alt"></i> ${formatDate(post.date)}</span>
-            <span class="blog-card__date"><i class="fas fa-user-md"></i> ${post.author || 'Dr. Anmol Billore'}</span>
-          </div>
-          <h2 class="blog-modal__title">${post.title}</h2>
-          <div class="blog-modal__body">${bodyHtml}</div>
-        </div>
-      </div>`;
-
-    modal.classList.add('show');
-    document.body.style.overflow = 'hidden';
-
-    modal.querySelector('#blog-modal-close')?.addEventListener('click', closeBlogModal);
-    modal.addEventListener('click', e => { if (e.target === modal) closeBlogModal(); });
-  };
-
-  function closeBlogModal() {
-    const modal = document.getElementById('blog-modal');
-    modal?.classList.remove('show');
-    document.body.style.overflow = '';
+    contentDiv.innerHTML = `
+      <div style="display:flex; gap: 1rem; color: var(--text-light); font-size: 0.9rem; margin-bottom: 2rem; border-bottom: 1px solid var(--border); padding-bottom: 1rem;">
+         <span><i class="fas fa-user-md"></i> ${post.author || 'Dr. Anmol Billore'}</span>
+         <span><i class="fas fa-calendar-alt"></i> ${formatDate(post.date)}</span>
+      </div>
+      ${bodyHtml}
+    `;
   }
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeBlogModal(); });
 
   /* ── 14. KICK OFF ALL ASYNC LOADS ─────────── */
   loadTestimonials();
