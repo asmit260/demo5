@@ -1,10 +1,12 @@
 ---
-title: "5 Signs You Need a Dental Implant (And Why to Act Fast)"
+title: 5 Signs You Need a Dental Implant (And Why to Act Fast)
 date: 2026-03-10T09:00:00.000Z
 author: Dr. Anmol Billore
 category: Dental Tips
-thumbnail: "https://images.unsplash.com/photo-1588776814546-1ffbb172c6b4?w=800&q=80"
-excerpt: "Losing a tooth doesn't mean losing your smile. Learn the key signs that a dental implant is your best option, and why acting sooner preserves the jaw bone you need for a successful procedure."
+thumbnail: /uploads/whatsapp-image-2026-03-01-at-9.54.19-pm.jpeg
+excerpt: Losing a tooth doesn't mean losing your smile. Learn the key signs that
+  a dental implant is your best option, and why acting sooner preserves the jaw
+  bone you need for a successful procedure.
 featured: true
 ---
 
