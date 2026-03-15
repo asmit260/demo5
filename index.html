@@ -7,9 +7,8 @@
   <meta name="keywords" content="dental clinic Indore, dentist near me, Infinity Dental Clinic, Dr. Anmol Billore, teeth whitening, dental implants, braces, root canal, aesthetic dentist" />
   <title>Infinity Dental Clinic | Dr. Anmol Billore | Expert Dental Care</title>
   <meta name="robots" content="index, follow" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;??&lt;/text&gt;&lt;/svg&gt;" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'&gt;&lt;text y='.9em' font-size='90'&gt;🦷&lt;/text&gt;&lt;/svg&gt;" />
 
-  <meta name="robots" content="index, follow" />
   <meta property="og:title" content="Infinity Dental Clinic | Dr. Anmol Billore | Expert Dental Care" />
   <meta property="og:description" content="Infinity Dental Clinic – Advanced dental care led by Dr. Anmol Billore. Premium, pain-free treatments including implants, root canals, and smile makeovers in Indore." />
   <meta property="og:url" content="https://infinitydentalclinic.in/" />
@@ -30,6 +29,48 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+  <!-- Schema.org LocalBusiness Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["Dentist", "MedicalOrganization"],
+    "name": "Infinity Dental Clinic",
+    "description": "Premium dental care in Indore by Dr. Anmol Billore — advanced, pain-free dental treatments including implants, root canals, braces, and smile makeovers.",
+    "url": "https://infinitydentalclinic.in/",
+    "telephone": "+917987654321",
+    "email": "info@infinitydentalclinic.in",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "34, Scheme Number 54, Vijay Nagar",
+      "addressLocality": "Indore",
+      "addressRegion": "Madhya Pradesh",
+      "postalCode": "452010",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 22.7533,
+      "longitude": 75.8911
+    },
+    "openingHours": ["Mo-Su 10:00-14:00", "Mo-Su 17:00-21:00"],
+    "priceRange": "₹₹",
+    "image": "https://infinitydentalclinic.in/dr-billore.jpg",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "120"
+    },
+    "employee": {
+      "@type": "Physician",
+      "name": "Dr. Anmol Billore",
+      "jobTitle": "Chief Dental & Cosmetic Surgeon",
+      "alumniOf": "Modern Dental College & Research Centre, Indore"
+    },
+    "sameAs": [
+      "https://wa.me/917987654321"
+    ]
+  }
+  </script>
 </head>
 <body data-page="home">
 
@@ -126,7 +167,7 @@
           <div class="hero__mobile-doc-label"><span>Dr. Anmol Billore</span><em>BDS · Implantologist</em></div>
         </div>
       </div>
-      <div class="scroll-hint"><span>Scroll to explore</span><i class="fas fa-chevron-down"></i></div>
+      <div class="scroll-hint"><span>Scroll to explore</span><i class="fas fa-chevron-down scroll-hint__arrow"></i></div>
     </section>
 
     <!-- ===== TRUST STRIP ===== -->
@@ -375,13 +416,14 @@
       </ul></div>
       <div class="footer__contact"><h4>Contact</h4>
         <p><i class="fas fa-map-marker-alt" style="margin-top:0.3rem;"></i> 34, Scheme Number 54, Vijay Nagar, Indore (near Agrawal Path Lab)</p>
+        <p><i class="fas fa-phone" style="margin-top:0.3rem;"></i> <a href="tel:+917987654321" style="color:inherit;text-decoration:none;">+91 79876 54321</a></p>
         <p><i class="fas fa-clock" style="margin-top:0.3rem;"></i> 10AM–2PM &amp; 5PM–9PM (Mon–Sun)</p>
         <a href="contact.html#appointment" class="btn btn--primary btn--sm" style="margin-top:1rem;display:inline-flex;">Book Appointment</a>
       </div>
     </div>
     <div class="footer__bottom">
       <div class="container">
-        <p>© 2025 Infinity Dental Clinic. Dr. Anmol Billore. All rights reserved.</p>
+        <p>© <span id="footer-year"></span> Infinity Dental Clinic. Dr. Anmol Billore. All rights reserved.</p>
         <div class="footer__bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
       </div>
     </div>
@@ -397,6 +439,7 @@
         if (!user) { window.netlifyIdentity.on('login', function() { document.location.href = '/admin/'; }); }
       });
     }
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>

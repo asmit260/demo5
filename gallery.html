@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -130,13 +130,16 @@
       </ul></div>
       <div class="footer__contact"><h4>Contact</h4>
         <p><i class="fas fa-map-marker-alt"></i> 34, Scheme 54, Vijay Nagar, Indore</p>
+        <p><i class="fas fa-phone"></i> <a href="tel:+917987654321" style="color:inherit;text-decoration:none;">+91 79876 54321</a></p>
         <p><i class="fas fa-clock"></i> 10AM–2PM &amp; 5PM–9PM (Mon–Sun)</p>
         <a href="contact.html#appointment" class="btn btn--primary btn--sm" style="margin-top:1rem;display:inline-flex;">Book Appointment</a>
       </div>
     </div>
-    <div class="footer__bottom"><div class="container"><p>© 2025 Infinity Dental Clinic. All rights reserved.</p><div class="footer__bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms</a></div></div></div>
+    <div class="footer__bottom"><div class="container"><p>© <span id="footer-year"></span> Infinity Dental Clinic. All rights reserved.</p><div class="footer__bottom-links"><a href="#">Privacy Policy</a><a href="#">Terms</a></div></div></div>
   </footer>
   <button class="back-to-top" id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
   <script defer src="script.js"></script>
+  <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+

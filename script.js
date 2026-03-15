@@ -238,7 +238,7 @@ const PAGE = document.body.dataset.page || 'home';
     const track    = document.getElementById('testimonial-track');
     if (!track) return;
 
-    const data = await safeFetch('/_data/testimonials.json');
+    const data = await safeFetch('_data/testimonials.json');
     const reviews = data?.reviews;
     if (!reviews || !reviews.length) {
       // Fall back to static content already in HTML (track is empty, add fallback)
@@ -348,7 +348,7 @@ const PAGE = document.body.dataset.page || 'home';
     const dotsEl = document.getElementById('ba-dots');
     if (!wrap) return;
 
-    const data = await safeFetch('/_data/before-after.json');
+    const data = await safeFetch('_data/before-after.json');
     const cases = data?.cases;
     if (!cases || !cases.length) {
       wrap.innerHTML = '<div class="ba-loading"><i class="fas fa-images"></i> No cases added yet.</div>';
@@ -487,7 +487,7 @@ const PAGE = document.body.dataset.page || 'home';
 
     let knownSlugs = [];
     try {
-      const resp = await fetch('/_data/blog-list.json');
+      const resp = await fetch('_data/blog-list.json');
       if (resp.ok) {
         knownSlugs = await resp.json();
       } else {
@@ -498,7 +498,7 @@ const PAGE = document.body.dataset.page || 'home';
     }
 
     const results = await Promise.all(
-      knownSlugs.map(s => safeFetch(`/_data/blog/${s}.md`, true).then(md => md ? parseFrontmatter(md, s) : null))
+      knownSlugs.map(s => safeFetch(`_data/blog/${s}.md`, true).then(md => md ? parseFrontmatter(md, s) : null))
     );
     let posts = results.filter(Boolean);
 
